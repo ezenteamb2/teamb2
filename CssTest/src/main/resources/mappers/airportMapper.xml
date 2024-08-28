@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.airportMapper">
+	<resultMap type="com.csstest.teamb.VO.airportVO" id="airportMap">
+		<id column="airport_no" property="airportNo" />
+		<result column="city_code" property="cityCode"/>
+		<result column="city_eng" property="cityEng"/>
+		<result column="city_kor" property="cityKor" />
+	</resultMap>
+	
+	<insert id="insertAirport" parameterType="com.csstest.teamb.VO.airportVO" useGeneratedKeys="true" keyProperty="int" keyColumn="airportNo">
+		insert into airport(
+			city_code,
+			city_eng,
+			city_kor
+		)
+		values(
+			#{cityCode},
+			#{cityEng},
+			#{cityKor}
+		);
+	</insert>
+	
+	<select id="getAll" resultMap="airportMap">
+		select * from airport;
+	</select>
+</mapper>
