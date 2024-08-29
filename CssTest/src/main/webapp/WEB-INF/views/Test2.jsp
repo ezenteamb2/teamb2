@@ -624,6 +624,16 @@
 				arrivalCity.focus;
 				return;
 			}
+			if(departureTime.val().trim() == "") {
+				alert("출발 시간을 선택하세요");
+				departureTime.focus;
+				return;
+			}
+			if(arrivalTime.val().trim() == "") {
+				alert("도착 시간을 선택하세요");
+				arrivalTime.focus;
+				return;
+			}
 			
 			$.ajax({
 				url: "<c:url value='/air/flight-schedule'/>",
@@ -650,7 +660,7 @@
 									//출발
 									element += "<div class='departure-list-row'>";
 									element += "<div class='flight-name'>";
-									element += "<img alt='" + icnList[i]['airline'] + "로고' src='"+context+"/resources/logo/logo_"+ icnList[i]["airline"] +".png'> <br>";
+									element += "<img onerror='this.onerror=null; this.src="+context+"/resources/logo/logo_flight.png;' src='"+context+"/resources/logo/logo_"+ icnList[i]["airline"] +".png'> <br>";
 									element += icnList[i]['airline'] + "<br>" + icnList[i]['flightId'] + "</div>";
 									element += "<div class='flight-route'>"; 
 									element += "<div class='route'>";
@@ -668,7 +678,7 @@
 									//도착
 									element += "<div class='arrival-list-row'>";
 									element += "<div class='flight-name'>";
-									element += "<img alt='" + icnList[i]['airline'] + "로고' src='"+context+"/resources/logo/logo_"+ icnList[i]["airline"] +".png'> <br>";
+									element += "<img onerror='this.onerror=null; this.src="+context+"/resources/logo/logo_flight.png;' src='"+context+"/resources/logo/logo_"+ icnList[i]["airline"] +".png'> <br>";
 									element += icnList[i]['airline'] + "<br>" + icnList[i]['flightId'] + "</div>";
 									element += "<div class='flight-route'>"; 
 									element += "<div class='route'>";
@@ -689,7 +699,7 @@
 							for(let i = 0; i < list.length; i++){
 								element += "<div class='flight-list-row'>";
 								element += "<div class='flight-name'>";
-								element += "<img alt='" + list[i]['airlineKor'] + "로고' src='"+context+"/resources/logo/logo_"+ list[i]["airlineKor"] +".png'> <br>";
+								element += "<img onerror='this.onerror=null; this.src="+context+"/resources/logo/logo_flight.png;' src='"+context+"/resources/logo/logo_"+ list[i]["airlineKor"] +".png'> <br>";
 								element += list[i]['airlineKor'] + "<br>" + list[i]['flightNum'] + "</div>";
 								element += "<div class='flight-route'>"; 
 								element += "<div class='route'>";
