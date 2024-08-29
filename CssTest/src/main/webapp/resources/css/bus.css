@@ -1,0 +1,692 @@
+@charset "UTF-8";
+
+/* 폰트 */
+
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LINESeedKR-Bd';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+/* 전체 div */
+.reservation_div{
+	width: 850px;
+	height: 180px;
+	padding : 40px 60px;
+	border-radius: 10px;
+	font-family: 'LINESeedKR-Bd';
+	font-size: 22px;
+	box-shadow: 0px 0px 30px 0px #E2CDFA;
+	display: flex; 
+	justify-content: center; 
+	margin: auto;
+	margin-top: 70px;
+}
+
+/* 전체 div 자식 */
+.reservation_sibling{
+	position: relative;
+}
+
+
+/* "항공권 검색" */
+.search_title{
+	height: 117px;
+    width: 100px;
+    display: inline-block;
+    font-size: 17px;
+    position: relative;
+    padding-right: 20px;
+    top: -100px;
+}
+
+								/* ---------------------------- 태그 ---------------------------- */
+
+/* 운항 스케줄 */
+.Schedule_div{
+	font-family: 'Freesentation-9Black';
+	display: inline-block;
+	cursor: pointer;
+	color : #009c75;
+	
+}
+
+
+
+								/* ---------------------------- 출발지 선택 ---------------------------- */
+
+/* 출발지 */
+.select_startDiv{
+	width : 180px;
+	height : 115px;
+	background : transparent;
+	display: inline-block;
+/* 	border-radius: 10px; */
+/* 	border : 2px solid rgb(211 219 217); */
+	transition-duration: 0.3s;
+	border-left : 2px solid rgb(211 219 217); 
+	border-right : 2px solid rgb(211 219 217); 
+	margin: 0px 25px 0px 25px;
+	position: relative; 
+}
+/* .select_startDiv:hover{
+		box-shadow: 0px 0px 3px 1px rgb(0 122 92);
+		cursor: pointer; 
+} */
+
+/* 출발지 이미지 */
+.start_img{
+	width: 40px;
+/* 	padding-left: 7px; */
+	padding-top: 20px;
+	position: absolute;
+	left: 12px;
+}
+.start_search_img{
+	width: 21px; 
+	position: absolute; 
+    left: 141px;
+    bottom: 17px;
+}
+.airport{
+	position: absolute;
+    left: 50px;
+    top: 30px;
+}
+/* 선택한 출발지 결과 */
+.start_result {
+    font-size: 17px;
+    position: absolute;
+    padding-top: 75px;
+    width: 140px;
+    text-align: left;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+    color: grey;
+}
+
+/* 출발지 선택 상자 */
+.select_startBox {
+	width: 556px;
+	height: 232px;
+	background: white;
+	position: absolute;
+	box-shadow: 0px 0px 6px 1px;
+	border-radius: 5px;
+	top: 114px;
+	padding: 40px 10px 40px 30px;
+	left: 209px;
+	}
+.start_tag1{
+	width : 105px;
+	height : 60px;
+	border : 1px solid #aaaaaa;
+	border-radius: 30px;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+	color : #aaaaaa;
+	transition-duration: 0.3s;
+}
+.start_tag2{
+	width : 105px;
+	height : 60px;
+	border : 1px solid #aaaaaa;
+	border-radius: 30px;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+	color : #aaaaaa;
+	transition-duration: 0.3s;
+}
+.start_tag3{
+	width : 105px;
+	height : 60px;
+	border : 1px solid #aaaaaa;
+	border-radius: 30px;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+	color : #aaaaaa;
+	transition-duration: 0.3s;
+}
+.start_tag4{
+	width : 105px;
+	height : 60px;
+	border : 1px solid #aaaaaa;
+	border-radius: 30px;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+	color : #aaaaaa;
+	transition-duration: 0.3s;
+}
+
+.start_tag1:hover{
+	color : #4B73E1;
+	border-color: #4B73E1;
+	cursor: pointer;
+	
+}
+.start_tag2:hover{
+	color : #4B73E1;
+	border-color: #4B73E1;
+	cursor: pointer;
+	
+}
+.start_tag3:hover{
+	color : #4B73E1;
+	border-color: #4B73E1;
+	cursor: pointer;
+	
+}
+.start_tag4:hover{
+	color : #4B73E1;
+	border-color: #4B73E1;
+	cursor: pointer;
+	
+}
+
+.startBox_close{
+	color: #aaaaaa;
+    float: right;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+.startBox_close:hover{
+	color : black;
+	cursor: pointer;
+}
+								/* ---------------------------- 목적지 ---------------------------- */
+
+/* 목적지 div */
+.select_people_div{
+	width : 140px;
+	height : 115px;
+	margin-left : 20px;
+	background : white;
+	display: inline-block;
+/* 	border-radius: 10px; */
+/* 	border : 2px solid rgb(211 219 217);  */
+	transition-duration: 0.3s;
+	position: relative; 
+}
+
+/* .select_people_div:hover{
+	box-shadow: 0px 0px 3px 1px rgb(0 122 92); 
+	cursor: pointer;
+}  */
+
+/* 목적지 이미지 */
+.end_img{
+	width: 40px;
+/* 	padding-left: 14px; */
+	padding-top: 20px;
+	position: absolute;
+}
+
+.end_search_img{
+	width: 21px; 
+	position: absolute; 
+    left: 123px;
+    bottom: 17px;
+}
+
+.location{
+	position: absolute; 
+	left: 39px;
+    top: 31px;
+}
+
+/* 목적지 선택  */
+.select_people{
+	font-size: 17px;
+	position: absolute;
+    padding-top: 75px;
+    width: 140px;
+    text-align: left;
+    color:grey; 
+    border-bottom: 2px solid black;
+}
+
+.select_endBox {
+    width: 790px;
+    height: 580px;
+    background: white;
+    position: absolute;
+    box-shadow: 0px 0px 6px 1px;
+    border-radius: 5px;
+    top: 114px;
+    padding: 40px 10px 40px 30px;
+    left: 20px;
+}
+
+
+.city_container{
+	height:634px; 
+}
+.country_tag{
+	width: 135px;
+	height: 60px;
+	border-radius: 5px;
+	font-size: 15px;
+	color: #4B73E1;
+	line-height: 4;
+    padding-left: 15px;
+    cursor: pointer;
+}
+.city_tag{
+	width : 185px;
+	height : 60px;
+	display : inline-block;
+	font-size : 15px;
+}
+.city_tag:hover{
+	color : #4B73E1;
+	cursor: pointer;
+}
+.select_endBox_close{
+	color: #aaaaaa;
+    float: right;
+    font-size: 18px;
+	margin-top: -215px;
+    margin-right: 20px;
+}
+.select_endBox_close:hover{
+	color : black;
+	cursor: pointer;
+} 
+								/* ---------------------------- 날짜 선택 ---------------------------- */
+
+.select_day_div{
+	width : 140px;
+	height : 115px;
+/* 	margin-left : 20px; */
+	background : transparent;
+	display: inline-block;
+/* 	border-radius: 10px; */
+/* 	border : 2px solid rgb(211 219 217);  */
+	transition-duration: 0.3s;
+	position: relative; 
+}
+/* .select_day_div:hover{
+	box-shadow: 0px 0px 3px 1px rgb(0 122 92);
+	cursor: pointer;
+}
+ */
+.select_day {
+    font-size: 17px;
+    position: absolute;
+    padding-top: 75px;
+    width: 140px;
+    text-align: left;
+    border-bottom: 2px solid black;
+}
+.date{
+	position: absolute; 
+    left: 47px;
+    top: 30px;
+}
+
+.calender_img{
+	width: 36px;
+	padding-left: -16px;
+	padding-top: 20px;
+	position: absolute;
+}
+.day_img {
+    width: 19px;
+    position: absolute;
+    left: 121px;
+    bottom: 19px;
+}
+.date_selectBox{
+    width: 835px;
+    height: 542px;
+    background: white;
+    position: absolute;
+    box-shadow: 0px 0px 6px 1px;
+    border-radius: 5px;
+    top: 114px;
+    padding: 40px 10px 40px 30px;
+    left: 397px;
+}
+
+/* 달력 */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+  float: none;
+}
+
+/* ======== Calendar ======== */
+.my-calendar {
+  width: 700px;
+  margin: 30px;
+  padding: 20px 20px 10px;
+  text-align: center;
+  font-weight: 800;
+  border: 1px solid #ddd;
+  cursor: default;
+}
+.my-calendar .clicked-date {
+  border-radius: 25px;
+  margin-top: 36px;
+  float: left;
+  width: 33%;
+  padding: 46px 0 26px;
+  background: #ddd;
+  position: absolute;
+}
+.my-calendar .calendar-box {
+  float: right;
+  width: 58%;
+  padding-left: 30px;
+}
+
+.clicked-date .cal-day {
+  font-size: 24px;
+}
+.clicked-date .cal-date {
+  font-size: 130px;
+}
+
+.ctr-box {
+  padding: 0 16px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.ctr-box .btn-cal {
+  position: relative;
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-top: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.ctr-box .btn-cal:after {
+  content: '<';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 25px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.ctr-box .btn-cal.next {
+  float: right;
+}
+.ctr-box .btn-cal.next:after {
+  content: '>';
+}
+
+.cal-table {
+  width: 100%;
+}
+.cal-table th {
+  width: 14.2857%;
+  padding-bottom: 5px;
+  font-size: 16px;
+  font-weight: 900;
+}
+.cal-table td {
+  padding: 3px 0;
+  height: 50px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.cal-table td.day {
+  position: relative;
+  cursor: pointer;
+}
+.cal-table td.today {
+  background: #ffd255;
+  border-radius: 50%;
+  color: #fff;
+}
+.cal-table td.day-active {
+  background: #ff8585;
+  border-radius: 50%;
+  color: #fff;
+}
+.cal-table td.has-event:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background: #FFC107;
+}
+
+.date_seleteBox_close{
+	color: #aaaaaa;
+    float: right;
+    font-size: 25px;
+    margin-right: 20px;
+    position: relative;
+    bottom: 15px;
+}
+.date_seleteBox_close:hover{
+	color : black;
+	cursor: pointer;
+}
+
+/* 								---------------------------- 시작 시간 선택 ----------------------------
+
+시작시간
+.select_seat_div{
+	width : 200px;
+	height : 115px;
+	margin-left : 20px;
+	background : white;
+	display: inline-block;
+	border-radius: 10px 0px 0px 10px;
+	border : 2px solid rgb(211 219 217);
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+.select_seat_div:hover{
+	box-shadow: 0px 0px 3px 1px rgb(0 122 92); 
+}
+
+시간 선택
+.select_seat{
+	font-size: 17px;
+	position: absolute;
+    padding-top: 75px;
+    width: 170px;
+    text-align: center;
+}
+
+출발시간 선택 이미지
+.Time_img{
+	width: 40px;
+	padding-left: 65px;
+	padding-top: 20px;
+	position: absolute;
+}
+
+출발시간 선택 div
+.select_startTimeBox{
+	width: 545px;
+    height: 435px;
+	background : white;
+	position: absolute;
+    box-shadow: 0px 0px 6px 1px;
+    border-radius: 5px;
+    top: 250px;
+    padding : 40px 10px 40px 30px;
+    left: 790px;
+}
+
+시간 div
+.startTime_tag{
+	width : 105px;
+	height: 40px;
+	border : 1px solid #aaaaaa;
+	border-radius: 30px;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	color : #aaaaaa;
+	transition-duration: 0.3s;
+}
+.startTime_tag:hover{
+	color : #009C75;
+	border-color: #009C75;
+	cursor: pointer;
+}
+
+출발시간 선택상자 취소 버튼
+.startTimeBox_close{
+	color: #aaaaaa;
+    float: right;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.startTimeBox_close:hover{
+	color : black;
+	cursor: pointer;
+} */
+
+/* 								---------------------------- 종료 시간 선택 ----------------------------
+
+종료시간
+.select_seat_div2{
+	width : 200px;
+	height : 115px;
+	background : white;
+	position: relative;
+    right: 3px;
+	display: inline-block;
+	border-radius: 0px 10px 10px 0px;
+	border : 2px solid rgb(211 219 217);
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+.select_seat_div2:hover{
+	box-shadow: 0px 0px 3px 1px rgb(0 122 92); 
+}
+
+.endTime_img{
+	width: 40px;
+	padding-left: 65px;
+	padding-top: 20px;
+	position: absolute;
+}
+
+.select_endTime{
+	font-size: 17px;
+	position: absolute;
+    padding-top: 75px;
+    width: 170px;
+    text-align: center;
+}
+
+.select_endTimeBox{
+	width: 545px;
+    height: 435px;
+	background : white;
+	position: absolute;
+    box-shadow: 0px 0px 6px 1px;
+    border-radius: 5px;
+    top: 250px;
+    padding : 40px 10px 40px 30px;
+    left: 990px;
+}
+
+.endTime_tag{
+	width : 105px;
+	height: 40px;
+	border : 1px solid #aaaaaa;
+	border-radius: 30px;
+	display: inline-block;
+	font-size: 15px;
+	text-align: center;
+	margin-right: 20px;
+	margin-bottom: 15px;
+	color : #aaaaaa;
+	transition-duration: 0.3s;
+}
+.endTime_tag:hover{
+	color : #009C75;
+	border-color: #009C75;
+	cursor: pointer;
+}
+
+.endTimeBox_close{
+	color: #aaaaaa;
+    float: right;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.endTimeBox_close:hover{
+	color : black;
+	cursor: pointer;
+}
+ */
+								/* ---------------------------- 검색 버튼 ---------------------------- */
+
+/* 검색버튼 div */
+.search_div{
+	width : 130px;
+	height : 115px;
+	margin-left : 20px;
+	background : white;
+	display: inline-block;
+	border-radius: 10px;
+	font-weight: 100;
+	font-family: 'LINESeedKR';
+}
+
+/* 검색버튼 */
+.search_btn {
+    width: 109px;
+    height: 45px;
+    font-size: 19px;
+    color: white;
+    background: #4B73E1;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    line-height: 2.5;
+    margin-top: 34px;
+    transition-duration: 0.3s;
+	
+}
+.search_btn:hover{
+	background : #caf0f8;
+	color: #4B73E1;
+	cursor: pointer;
+}
