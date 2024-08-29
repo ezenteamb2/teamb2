@@ -126,8 +126,27 @@ body
     
     <li class="departure">
       <span class="time">${icn.sdtTime}</span>
-      <span class="to">${icn.airport}</span>
-      <span class="dest"><span>${icn.arrairport}</span></span>
+      <c:choose>
+     	 <c:when test="${icn.airport eq null}">
+     	  <span class="to">INCHEON</span>
+      	</c:when>
+      	<c:otherwise>
+      		 <span class="to">${icn.airport}</span>
+      	</c:otherwise>
+      </c:choose>
+     <%--  <span class="to">${icn.airport}</span> --%>
+     <c:choose>
+     	 <c:when test="${icn.arrairport eq null}">
+     	  <span class="to">INCHEON</span>
+      	</c:when>
+      	<c:otherwise>
+      		 <span class="dest"><span>${icn.arrairport}</span></span>
+      	</c:otherwise>
+      </c:choose>
+     
+     
+      <%-- <span class="dest"><span>${icn.arrairport}</span></span> --%>
+      
       <span class="airline">${icn.airline}</span>
       <span class="plane">${icn.flightId}</span>
       <c:choose>
