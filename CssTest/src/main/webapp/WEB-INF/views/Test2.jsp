@@ -32,7 +32,7 @@
 			운항 스케줄
 		</div>
 		<div class="Real_Time_div">
-			실시간
+			<a href="<c:url value='/airport.do'/>">실시간</a>
 		</div>
 	</div>
 	
