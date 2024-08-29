@@ -34,4 +34,15 @@
 		<task:scheduled ref="flightSch" method="flightInternational" cron="0 38 9 * * *"/>
 	</task:scheduled-tasks>
 	 
+	  <beans:bean id="scTask" class="com.csstest.teamb.controller.Task"/>
+		<!--스케줄러가 사용할 id 와 사용할 pool 개수를 정의해야 한다. -->
+		<task:scheduler id="scTest" pool-size="5"/>
+		<!--스케줄러로 만들어 놓은 id에 사용할 메서드를 등록한다. --> 
+	<task:scheduled-tasks scheduler="scTest">
+		<!--스케줄러가 동작시킬 메서드와 동작시킬 주기를 등록한다. -->
+		<task:scheduled ref="scTask" method="InAPI" cron="0 0 0/2 * * *"/>
+		<task:scheduled ref="scTask" method="FlightApiiDB" cron="0 0 0/3 * * *"/>
+		<!-- <task:scheduled ref="scTask" method="InAPI" cron="*/60 * * * * *"/> -->
+	</task:scheduled-tasks> 
+	 
 </beans:beans>

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+:root, html {
+    font-size: 16px;
+    font-size: 1rem;
+}
+.board {
+    display: flex;
+    padding: 15px;
+    width: 1287PX;
+    background-color: #1e1e1e;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: 100px;
+  
+   
+}
+ul.departures {
+    margin-left: 0;
+    padding-left: 0;
+    width: 504px;
+    margin: auto;
+    list-style: none;
+    color: #e4e4e4;
+}
+ul.departures span {
+    padding: 1px;
+}
+ul.departures .headers {
+   display: grid;
+    width: 71%;
+    grid-template-columns: 27% 27.2% 74% 46.8% 35% 44% 26% 32% 38% 24%;
+    font-family: sans-serif;
+    margin-left:  -371px;;
+    
+
+
+}
+ul.departures .headers .h-airline {
+    text-align: right;
+}
+ul.departures .headers .h-to {
+    text-align: right;
+}
+ul.departures .headers .h-expt {
+    text-align: right;
+}
+ul.departures .headers .h-gate {
+    text-align: right;
+}
+ul.departures .headers .h-status {
+    text-align: right;
+}
+ul.departures .headers .h-plane {
+    text-align: right;
+}
+ul.departures .headers .h-dest {
+    text-align: right;
+}
+ul.departures .headers .h-terminal {
+    text-align: right;
+}
+
+ul.departures .footer {
+    padding: 5px 0 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+ul.departures .departure {
+    display: grid;
+    width:  252%;
+    padding: 0;
+    grid-template-columns:   
+	5% 22.2% 15% 9% 9.8% 10% 8% 8% 12%;
+    font-family: consolas, monospace;
+    color: yellow;
+    background-color: #141414;
+    overflow-x: hidden;
+    margin-left: -378px;
+
+}
+ul.departures .departure .time {
+    order: 1;
+}
+ul.departures .departure .to {
+    order: 2;
+    text-align: center;
+}
+ul.departures .departure .dest {
+    order: 3;
+    white-space: nowrap;
+    overflow: hidden;
+}
+ul.departures .departure .airline {
+    order: 4;
+    text-align: right;
+}
+ul.departures .departure .plane {
+    order: 5;
+    text-align: right;
+}
+ul.departures .departure .terminal {
+    order: 6;
+    text-align: right;
+}
+
+
+
+ul.departures .departure .gate {
+    order: 7;
+    text-align: right;
+}
+ul.departures .departure .expt {
+    order: 8;
+    text-align: right;
+}
+ul.departures .departure .status {
+    order: 9;
+    text-align: right;
+}
+ul.departures .departure .dest > span {
+    display: inline-block;
+}
+
+
+
+ul.departures .departure .message {
+    width: auto;
+    grid-column: 1 / 5;
+    grid-row: auto-flow;
+    white-space: nowrap;
+}
