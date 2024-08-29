@@ -1,0 +1,187 @@
+.container {
+	width: 1300px;
+	height: 700px;
+	background: #a7a7a7;
+	margin: 100px auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.ticket {
+	width: 1010px;
+	height: 330px;
+	background: #fff;
+	margin: auto;
+	border-radius: 10px;
+}
+
+.ticket-left {
+	width: 700px;
+	height: 100%;
+	border-right: 3px dashed #cccccc;
+	display: inline-block;
+	float: left;
+	position: relative;
+}
+
+.ticket-right {
+	width: 307px;
+	height: 100%;
+	display: inline-block;
+	float: right;
+	position: relative;
+}
+
+.ticket-left-top {
+	width: 100%;
+	height: 60px;
+	background: #6c6c97;
+	border-top-left-radius: 10px;
+	border-right: 3px dashed #eeeeee;
+	display: flex;
+    align-items: center;
+}
+
+.ticket-right-top {
+	width: 100%;
+	height: 60px;
+	background: #6c6c97;
+	border-top-right-radius: 10px;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ticket-left-top i {
+	font-size: 40px;
+	color: #dddddd;
+	margin: auto 20px;
+}
+
+.ticket-left-top span {
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Noto Sans Thaana', sans-serif;
+	color: #fff;
+}
+
+.ticket-right-top span {
+	font-size: 27px;
+	font-weight: 600;
+	font-family: 'Noto Sans Thaana', sans-serif;
+	color: #fff;
+}
+
+.ticket-left-content {
+	margin: 15px 40px 0px;
+}
+
+.ticket-left .passenger {
+	font-size: 14px;
+	color: #dddddd;
+	margin-bottom: 10px;
+}
+
+.ticket-left .from, .date {
+	font-size: 14px;
+	color: #dddddd;
+	display : inline-block;
+	margin-bottom: 10px;
+	margin-right: 140px;
+	width: 135px;
+}
+
+.ticket-left .to, .dep {
+	font-size: 14px;
+	color: #dddddd;
+	display : inline-block;
+}
+			
+.ticket-left .passenger span, .ticket-left .from span, .ticket-left .to span, .ticket-left .date span, .ticket-left .dep span {
+	font-size: 21px;
+	color: #1c1c1c;
+}
+
+.ticket-left-bottom{
+	margin: 0px 40px;
+}
+
+.ticket-left .flight span, .ticket-left .boarding span, .ticket-left .gate span, .ticket-left .seat span {
+	font-size: 25px;
+	color: #1c1c1c;
+	font-weight: 600;
+}
+
+.ticket-left .flight, .ticket-left .boarding, .ticket-left .gate, .ticket-left .seat {
+	font-size: 13px;
+	color: #dddddd;
+	display : inline-block;
+	margin-right: 70px;
+}
+
+.ticket-right-content {
+	margin: 15px 20px 0px;
+}
+
+.ticket-right .passenger,  .ticket-right .date, .ticket-right .dep {
+	font-size: 13px;
+	color: #dddddd;
+	margin-bottom: 10px;
+}
+
+.ticket-right .from {
+	font-size: 13px;
+	color: #dddddd;
+	margin-bottom: 10px;
+	margin-right: 45px;
+	display: inline-block;
+}
+
+.ticket-right .to {
+	font-size: 13px;
+	color: #dddddd;
+	margin-bottom: 10px;
+	display: inline-block;
+}
+
+.ticket-right .passenger span, .ticket-right .from span, .ticket-right .to span, .ticket-right .date span, .ticket-right .dep span {
+	font-size: 18px;
+	color: #1c1c1c;
+}
+
+.ticket-right .ticket-right-bottom{
+	margin: 10px 20px 0px;
+}
+
+.ticket-right .flight span, .ticket-right .boarding span, .ticket-right .gate span, .ticket-right .seat span {
+	font-size: 25px;
+	color: #1c1c1c;
+	font-weight: 600;
+}
+
+.ticket-right .flight, .ticket-right .boarding, .ticket-right .gate, .ticket-right .seat {
+	font-size: 13px;
+	color: #dddddd;
+	display : inline-block;
+	margin-right: 50px;
+}
+
+.ticket-left-bottom-line {
+	width: 100%;
+	height: 20px;
+	background: #6c6c97;
+	border-bottom-left-radius: 10px;
+	border-right: 3px dashed #eeeeee;
+    position: absolute;
+    bottom: 0;
+}
+
+.ticket-right-bottom-line {
+	width: 100%;
+	height: 20px;
+	background: #6c6c97;
+	border-bottom-right-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}

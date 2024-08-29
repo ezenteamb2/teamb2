@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="inrealtimeMapper">
+	<resultMap type="com.csstest.teamb.VO.inVO" id="inMap">
+		<id property="inNo" column="icn_realtime_no"/>
+		<result property="flightId" column="flight_id" />
+		<result property="gatenumber" column="gate" />
+		<result property="remark" column="remark" />
+		<result property="elapsetime" column="time" />
+		<result property="scheduleDateTime" column="sdt" />
+		<result property="estimatedDateTime" column="edt" />
+		<result property="airline" column="airline" />
+		<result property="airport" column="departure_airport" />
+		<result property="arrairport" column="arrival_airport" />
+		<result property="sdtTime" column="sdt_time" />
+		<result property="edtTime" column="edt_time" />
+		<result property="terminalId" column="terminal" />
+		<result property="typeOfFlight" column="type_of_flight" />
+	</resultMap>
+
+	<insert id="insert" parameterType="com.csstest.teamb.VO.inVO" useGeneratedKeys="true" keyProperty="inNo">
+		insert into icn_realtime(icn_realtime_no, flight_id, gate, remark, time, sdt, edt, airline, arrival_airport, departure_airport, terminal, type_of_flight) 
+		values(#{inNo}, #{flightId}, #{gatenumber}, #{remark}, #{elapsetime}, #{scheduleDateTime}, #{estimatedDateTime},#{airline}, #{arrairport}, #{airport}, #{terminalId}, #{typeOfFlight})
+			
+	</insert>
+	
+	<select id="select" parameterType="com.csstest.teamb.VO.inVO"  resultMap="inMap">
+	select *,concat(SUBSTRING(sdt, 1, 2),':',SUBSTRING(sdt, 3)) as sdt_time, concat(SUBSTRING(edt, 1, 2),':',SUBSTRING(edt, 3)) as edt_time from icn_realtime  where icn_realtime_no =#{inNo};
+	</select>
+	
+	<select id="selectAll" resultMap="inMap">
+	select *,concat(SUBSTRING(sdt, 1, 2),':',SUBSTRING(sdt, 3)) as sdt_time, concat(SUBSTRING(edt, 1, 2),':',SUBSTRING(edt, 3)) as edt_time  from icn_realtime where str_to_date(concat(date_format(Now(), '%Y-%m-%d'), ' ', SUBSTRING(sdt, 1, 2),':',SUBSTRING(sdt, 3), ':00'), '%Y-%m-%d %H:%i:%s') between now() and  DATE_ADD(NOW(), INTERVAL 2 HOUR);
+	</select>
+	
+	<delete id="cleartable">
+	truncate table icn_realtime;
+	</delete>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flightrealtimeMapper">
+
+	<resultMap type="com.csstest.teamb.VO.FlightInfoVO" id="flight">
+		<id property="realtimeNo" column="realtime_no"/>
+		<result property="airFln" column="air_fln"/>
+		<result property="airlineEnglish" column="airline_eng"/>
+		<result property="boardingEng" column="boarding_eng"/>
+		<result property="arrivedEng" column="arrived_eng"/>
+		<result property="std" column="std"/>
+		<result property="etd" column="etd"/>
+		<result property="rmkEng" column="rmk_eng"/>
+		<result property="gate" column="gate"/>
+		<result property="io" column="io"/>
+		<result property="line" column="line"/>
+		<result property="sdtTime" column="sdt_time" />
+		<result property="edtTime" column="edt_time" />
+		<result property="airport" column="airport" />
+		<result property="city" column="city" />
+	</resultMap>	
+		
+	<insert id="insert" parameterType="com.csstest.teamb.VO.FlightInfoVO" useGeneratedKeys="true" keyProperty="flight" >
+	insert into flight_realtime(realtime_no, air_fln, airline_eng, boarding_eng,arrived_eng, std, etd, rmk_eng, gate, io, line, airport, city )
+	values (#{realtimeNo},#{airFln}, #{airlineEnglish}, #{boardingEng}, #{arrivedEng}, #{std},  #{etd},  #{rmkEng}, #{gate},#{io},#{line}, #{airport}, #{city} );
+		
+	</insert>
+
+	<select id="selectAll" resultMap="flight">
+	select *,concat(SUBSTRING(std, 1, 2),':',SUBSTRING(std, 3)) as sdt_time, concat(SUBSTRING(etd, 1, 2),':',SUBSTRING(etd, 3)) as edt_time  from flight_realtime where str_to_date(concat(date_format(Now(), '%Y-%m-%d'), ' ', SUBSTRING(std, 1, 2),':',SUBSTRING(std, 3), ':00'), '%Y-%m-%d %H:%i:%s') between now() and  DATE_ADD(NOW(), INTERVAL 2 HOUR);
+	</select>
+	
+	<delete id="cleartable">
+	truncate table flight_realtime;
+	</delete>
+</mapper>

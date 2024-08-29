@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="airbusMapper">
+	<resultMap type="VO.airbusTOICNVO" id="airbusMap">
+		<id property="icnBusNo" column="icn_bus_no"/>
+			<result property="adultfare" column="adultfare"/>
+			<result property="area" column="area"/>
+			<result property="busclass" column="busclass"/>
+			<result property="busnumber" column="busnumber"/>
+			<result property="cpname" column="cpname"/>	
+			<result property="routeinfo" column="routeinfo"/>	
+			<result property="t1endfirst" column="t1endfirst"/>	
+			<result property="t1endlast" column="t1endlast"/>	
+			<result property="t1ridelo" column="t1ridelo"/>	
+			<result property="t1wdayt" column="t1wdayt"/>	
+			<result property="t1wt" column="t1wt"/>	
+			<result property="t2endfirst" column="t2endfirst"/>	
+			<result property="t2endlast" column="t2endlast"/>	
+			<result property="t2ridelo" column="t2ridelo"/>	
+			<result property="t2wdayt" column="t2wdayt"/>	
+			<result property="t2wt" column="t2wt"/>	
+			<result property="toawfirst" column="toawfirst"/>		
+			<result property="toawlast" column="toawlast"/>
+	</resultMap>
+	
+	<resultMap type="VO.airbuskorVO" id="airbuskorMap">
+		<id property="airportBusNo" column="airport_bus_no"/>
+			<result property="category" column="category"/>
+			<result property="busNum" column="num"/>
+			<result property="card" column="card"/>
+			<result property="comName" column="comname"/>
+			<result property="endTime" column="end_time"/>
+			<result property="etc" column="etc"/>
+			<result property="firstTime" column="first_time"/>
+			<result property="gate" column="gate"/>
+			<result property="money" column="money"/>
+			<result property="route" column="route"/>
+	</resultMap>
+	
+	<insert id="createAirbus" parameterType="VO.airbusTOICNVO" useGeneratedKeys="true" keyProperty="icnbusNo">
+		insert into icn_bus(icn_bus_no, adultfare, area, busclass, busnumber, cpname, routeinfo, t1endfirst, 
+		t1endlast, t1ridelo, t1wdayt, t1wt, t2endfirst, t2endlast, t2ridelo, t2wdayt, t2wt, toawfirst, toawlast)
+		values(#{icnBusNo}, #{adultfare}, #{area}, #{busclass}, #{busnumber}, #{cpname}, #{routeinfo}, #{t1endfirst}, 
+		#{t1endlast}, #{t1ridelo}, #{t1wdayt}, #{t1wt}, #{t2endfirst}, #{t2endlast}, #{t2ridelo}, #{t2wdayt}, #{t2wt},
+		#{toawfirst}, #{toawlast});
+	</insert>
+	
+	<insert id="createAirbuskor" parameterType="VO.airbuskorVO" useGeneratedKeys="true" keyProperty="airportBusNo">
+		insert into airport_bus(airport_bus_no, category, num, card, comname, end_time, etc, first_time, gate, money, route)
+		values(#{airportBusNo}, #{category}, #{busNum}, #{card}, #{comName}, #{endTime}, #{etc}, #{firstTime}, #{gate}, #{money}, #{route}); 
+	</insert>
+	
+	<select id="selectAirbus" parameterType="string" resultType="VO.airbusTOICNVO">
+		<choose>
+			<when test ="value eq '서울'">
+				select * from icn_bus where area = 1;
+			</when>
+			<when test ="value eq '인천'">
+				select * from icn_bus where area = 3;
+			</when>
+			<when test ="value eq '경기'">
+				select * from icn_bus where area = 2;
+			</when>
+			<otherwise>
+				select * from icn_bus where busnumber like concat('%', #{value}, '%');
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="selectAirbuskor" parameterType="string" resultType="VO.airbuskorVO">
+		<choose>
+			<when test ="value eq '서울'">
+				select * from icn_bus where area = 1;
+			</when>
+			<when test ="value eq '인천'">
+				select * from icn_bus where area = 3;
+			</when>
+			<when test ="value eq '경기'">
+				select * from icn_bus where area = 2;
+			</when>
+			<otherwise>
+				select * from icn_bus where busnumber like concat('%', #{value}, '%');
+			</otherwise>
+		</choose>
+	</select>
+
+</mapper>
