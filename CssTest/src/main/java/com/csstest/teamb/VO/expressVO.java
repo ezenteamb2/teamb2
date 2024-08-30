@@ -10,7 +10,7 @@ public class expressVO {
 	private String arrPlaceNm;
 	private int expressType;
 	
-	
+	 
 	 public int getExpressType() {
 		return expressType;
 	}

@@ -10,7 +10,7 @@
 		<result property="arrPlaceNm" column="arr_name" />
 		<result property="expressType" column="express_type" />
 	</resultMap>
-
+ 
 	<insert id="insert" parameterType="com.csstest.teamb.VO.expressVO" useGeneratedKeys="true" keyProperty="expressNo">
 		insert into express_bus(express_no, grade_nm,  dep_time, arr_time, dep_name, arr_name ,express_type) 
 		values(#{expressNo}, #{gradeNm},  #{depPlandTime}, #{arrPlandTime}, #{depPlaceNm}, #{arrPlaceNm}, #{expressType})
