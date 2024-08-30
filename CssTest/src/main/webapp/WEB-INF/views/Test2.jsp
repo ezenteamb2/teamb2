@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+
+<%@ include file="/include/header.jsp" %>
 
 <!-- css -->
 <link rel="stylesheet" href="<c:url value='/resources/css/test2.css' />" rel="stylesheet">
@@ -16,12 +15,7 @@
 <!-- icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-
-</head>
-<body>
-
+<%@ include file="/include/ChatBot.jsp" %>
 <!-- 전체 div -->
 <div class="reservation_div">
 		
@@ -42,7 +36,7 @@
 		<!-- 출발지 선택 div -->
 		<div class="select_startDiv">
 			
-			<img src="<c:url value='/resources/img/airport/startAir.png'/>" class="start_img" >
+			<img src="<c:url value='/resources/img/airport/startAir.png'/>" class="start_img">
 			<div class="start_result">출발지 선택</div>
 			
 		</div>
