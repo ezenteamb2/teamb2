@@ -8,8 +8,8 @@
 	<bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
 		<property name="url" value="jdbc:mysql://192.168.0.202:3306/teamb2"></property>
-		<property name="username" value="lee"></property>
-		<property name="password" value="ezen"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="1234"></property>
 	</bean>
 	
 	<bean id="jdbcTempleate" class="org.springframework.jdbc.core.JdbcTemplate">

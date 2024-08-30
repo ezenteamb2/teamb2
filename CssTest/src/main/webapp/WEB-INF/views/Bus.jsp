@@ -2,9 +2,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <!-- css -->
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/bus.css">
@@ -18,9 +15,8 @@
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 
+<%@ include file="/include/header.jsp" %>
 
-
-<title>Insert title here</title>
 
 	<style>
 		.category {
@@ -63,12 +59,7 @@
 	</style>
 
 
-</head>
-
-
-			 
-<body>
-
+<%@ include file="/include/ChatBot.jsp" %>
 <!-- 전체 div -->
 <div class="reservation_div">
 		

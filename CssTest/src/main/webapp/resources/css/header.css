@@ -1,0 +1,514 @@
+@charset "UTF-8";
+
+									/* ---------------------  애니메이션 효과  --------------------- */
+
+@keyframes shadow-drop-2-center {
+  0% {
+            transform: translateZ(0);
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+  100% {
+            transform: translateZ(50px);
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0);
+  }
+}
+
+
+@keyframes jello-horizontal {
+  0% {
+            transform: scale3d(1, 1, 1);
+  }
+  30% {
+            transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+            transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+            transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+            transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+            transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+            transform: scale3d(1, 1, 1);
+  }
+}
+
+
+								/* ---------------------  타이틀 이미지 애니메이션 효과  --------------------- */
+
+/* 버스 */
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  1% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  33% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  34% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+
+/* 열차 */
+@keyframes scale-in-center2 {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  34% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  35% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  63% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  64% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+
+/* 비행기 */
+@keyframes scale-in-center3 {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  64% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  65% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  99% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+/* 1번 북 */
+@keyframes slide-in-blurred-left {
+  0% {
+            transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+            transform-origin: 100% 50%;
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateX(0) scaleY(1) scaleX(1);
+            transform-origin: 50% 50%;
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+/* 2번 북 */
+@keyframes slide-in-blurred-tl {
+  0% {
+            transform: translate(-1000px, -1000px) skew(80deg, 10deg);
+            transform-origin: 100% 0%;
+            filter: blur(40px);
+   			opacity: 0;
+  }
+  100% {
+            transform: translate(0, 0) skew(0deg, 0deg);
+            transform-origin: 50% 50%;
+            filter: blur(0);
+    		opacity: 1;
+  }
+}
+
+/* 3번 북 */
+@keyframes slide-in-blurred-top {
+  0% {
+            transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+            transform-origin: 50% 0%;
+            filter: blur(40px);
+    		opacity: 0;
+  }
+  100% {
+            transform: translateY(0) scaleY(1) scaleX(1);
+            transform-origin: 50% 50%;
+            filter: blur(0);
+    		opacity: 1;
+  }
+}
+
+/* 4번 북 */
+@keyframes slide-in-blurred-tr {
+  0% {
+            transform: translate(1000px, -1000px) skew(-80deg, -10deg);
+            transform-origin: 0% 0%;
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+            transform: translate(0, 0) skew(0deg, 0deg);
+            transform-origin: 50% 50%;
+            filter: blur(0);
+    		opacity: 1;
+  }
+}
+
+/* 5번 북 */
+@keyframes slide-in-blurred-right {
+  0% {
+            transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+            transform-origin: 0% 50%;
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+		transform: translateX(0) scaleY(1) scaleX(1);
+        transform-origin: 50% 50%;
+        filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+									/* ---------------------  폰트  --------------------- */
+
+@font-face {
+    font-family: 'TheJamsil5Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SF_IceLemon';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/SF_IceLemon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+									/* ---------------------  전체 div  --------------------- */
+.Main_div{
+	width : 1500px;
+	margin : 0px auto;
+	text-align: center;
+	padding-top : 30px;
+	position: relative;
+}
+
+
+
+									/* ---------------------  사이트 이름  --------------------- */
+
+/* 에어두드림 */
+.Main_title{
+	padding-bottom : 20px;	
+	font-family: 'RixInooAriDuriR';
+	font-size: 30px;
+	margin-top: 70px;
+	color : #66d6f4;
+	
+}
+.Main_title span{
+	color : #00256c;
+	font-family: 'SF_IceLemon';
+	display: inline-block;
+	transition-duration: 0.2s; 
+}
+
+
+/* 타이틀 이미지 div */
+.title_img_div{
+	display: inline-block;
+	position: absolute;
+    top: 90px;
+    padding-left: 27px;
+}
+
+.title_img_div2_1{
+	position: absolute;
+	display: inline-block;
+	top: 45px;
+    left: 638px;
+}
+.title_img_div2_2{
+	position: absolute;
+	display: inline-block;
+	top: 30px;
+	padding-left: 3px;
+}
+.title_img_div2_3{
+	position: absolute;
+	display: inline-block;
+	top: 45px;
+	padding-left: 48px;
+}
+.title_img_div2_4{
+	position: absolute;
+	display: inline-block;
+	top: 30px;
+	padding-left: 93px;
+}
+.title_img_div2_5{
+	position: absolute;
+	display: inline-block;
+	top: 45px;
+	padding-left: 137px;
+}
+
+
+/* 타이틀 이미지 */
+
+/* 버스 */
+.title_img{
+	transition-duration: 0.2s;
+	width : 50px;
+	display : none;
+	animation: scale-in-center 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* 열차 */
+.title_img2{
+	transition-duration: 0.2s;
+	width : 50px;
+	display : none;
+	animation: scale-in-center2 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* 비행기 */
+.title_img3{
+	transition-duration: 0.2s;
+	width : 50px;
+	display : none;
+	animation: scale-in-center3 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* 드럼 */
+.title_img4_1{
+	transition-duration: 0.2s;
+	width : 50px;
+    animation: slide-in-blurred-left 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    display: none;
+}
+.title_img4_2{
+	transition-duration: 0.2s;
+	width : 50px;
+	animation: slide-in-blurred-tl 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	display: none;
+}
+.title_img4_3{
+	transition-duration: 0.2s;
+	width : 50px;
+	animation: slide-in-blurred-top 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	display: none;
+}
+.title_img4_4{
+	transition-duration: 0.2s;
+	width : 50px;
+	animation: slide-in-blurred-tr 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	display: none;
+}
+.title_img4_5{
+	transition-duration: 0.2s;
+	width : 50px;
+	animation: slide-in-blurred-right 1.2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	display: none;
+}
+
+
+							/* -------------------------------- 로그인 회원가입 --------------------------------  */
+							
+.header_login{
+	color:black;
+	text-decoration: none;
+}
+.header_login:hover{
+	color: #00d1e5;
+}
+
+
+										/* ---------------------  태그  --------------------- */
+
+				
+/* 태그 */
+.transportation_tag{
+	display : inline-block;
+	margin: 30px 20px 0px;
+	
+}
+.transportation_tag:hover {
+	  animation: jello-horizontal 0.9s both;
+	  
+}
+
+
+.transportation_tag2{
+	display : inline-block;
+	margin: 30px 20px 0px;
+	
+}
+.transportation_tag2:hover {
+	  animation: jello-horizontal 0.9s both;
+}
+
+
+.transportation_tag3{
+	display : inline-block;
+	margin: 30px 20px 0px;
+	
+}
+.transportation_tag3:hover {
+	  animation: jello-horizontal 0.9s both;
+}
+
+
+.transportation_tag4{
+	display : inline-block;
+	margin: 30px 20px 0px;
+	
+}
+.transportation_tag4:hover {
+	  animation: jello-horizontal 0.9s both;
+}
+
+
+/* 태그 이미지 */
+.tag_img{
+	width : 50px;
+	display : inline-block;
+}
+.tag_img2{
+	width : 50px;
+	display : inline-block;
+}
+.tag_img3{
+	width : 50px;
+	display : inline-block;
+}
+.tag_img4{
+	width : 50px;
+	display : inline-block;
+}
+
+.tag_video{
+	width : 50px;
+	display : none;
+}
+.tag_video2{
+	width : 50px;
+	display : none;
+}
+.tag_video3{
+	width : 50px;
+	display : none;
+}
+.tag_video4{
+	width : 50px;
+	display : none;
+}
+
+/* 태그이름 */
+.tag_name{
+	font-family: 'TheJamsil5Bold';
+	font-size : 20px;
+	display : inline-block;
+	position: relative;
+    bottom: 17px;
+}
+
+									/* ----------------------- 숨겨진 헤더 ----------------------- */
+
+.header_hidden_div{
+	position: fixed;
+    background: #ffffff;
+    width: 100%;
+    height: 90px;
+    z-index: 8;
+    top: 0px;
+    left: 0px;
+    border-bottom: 1px solid #a5a5a5;
+    text-align: center;
+	display : none;
+}
+.header_hidden_sDiv{
+	display: flex;
+    align-items: center;
+    width: 1280px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    height: 70px;
+    padding: 0px;
+}
+.header_hidden_tagDiv{
+	position: absolute;
+    padding-left: 380px;
+    font-size: 20px;
+}
+.hidden_tag{
+	display: inline-block;
+    margin-right: 31px;
+    font-size: 25px;
+    font-family: 'TheJamsil5Bold';
+    padding-top: 12px;
+}
+.hidden_tag:hover{
+	color: #66d6f4;
+	cursor: pointer;
+}
+.loginBox{
+	padding-left: 1020px;
+    font-family: 'TheJamsil5Bold';
+    color: #595959;	
+}
+.hidden_title_img{
+	width: 30px;
+    position: relative;
+    top: 5px;
+}
+.login_join_text{
+	color: #595959;	
+	text-decoration: none;
+}
+.login_join_text:hover{
+	cursor: pointer;
+	color:black;
+}
