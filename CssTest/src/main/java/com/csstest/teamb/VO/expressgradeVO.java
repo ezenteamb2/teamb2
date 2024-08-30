@@ -11,7 +11,7 @@ public class expressgradeVO {
 		return expressgradeNo;
 	}
 
-
+ 
 	public int getExpressType() {
 		return expressType;
 	}

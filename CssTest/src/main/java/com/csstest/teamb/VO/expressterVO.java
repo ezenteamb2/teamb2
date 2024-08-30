@@ -6,7 +6,7 @@ public class expressterVO {
 	private int expressType;
 	private String terminalld;
 	private String terminalNm;
-	
+	 
 	public String getExpressterNo() {
 		return expressterNo;
 	}

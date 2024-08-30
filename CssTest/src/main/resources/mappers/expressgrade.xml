@@ -9,7 +9,7 @@
 		<result property="gradeNm" column="grade_nm"/>
 		
 	</resultMap>	
-		
+		 
 	<insert id="insert" parameterType="com.csstest.teamb.VO.expressgradeVO" useGeneratedKeys="true" keyProperty="expressgradeNo" >
 	insert into express_bus_grade(express_grade_no, express_type , grade_id, grade_nm )
 	values (#{expressgradeNo},#{expressType}, #{gradeId}, #{gradeNm});
