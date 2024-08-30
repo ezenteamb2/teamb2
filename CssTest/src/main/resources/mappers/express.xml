@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="expressMapper">
+	<resultMap type="com.csstest.teamb.VO.expressVO" id="express">
+		<id property="expressNo" column="express_no"/>
+		<result property="gradeNm" column="grade_nm" />
+		  <result property="depPlandTime" column="dep_time" />
+		<result property="arrPlandTime" column="arr_time" />
+		<result property="depPlaceNm" column="dep_name" />
+		<result property="arrPlaceNm" column="arr_name" />
+		<result property="expressType" column="express_type" />
+	</resultMap>
+ 
+	<insert id="insert" parameterType="com.csstest.teamb.VO.expressVO" useGeneratedKeys="true" keyProperty="expressNo">
+		insert into express_bus(express_no, grade_nm,  dep_time, arr_time, dep_name, arr_name ,express_type) 
+		values(#{expressNo}, #{gradeNm},  #{depPlandTime}, #{arrPlandTime}, #{depPlaceNm}, #{arrPlaceNm}, #{expressType})
+				
+	</insert>
+</mapper>

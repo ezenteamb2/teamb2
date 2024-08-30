@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="expressgradeMapper">
+
+	<resultMap type="com.csstest.teamb.VO.expressgradeVO" id="expressgrade">
+		<id property="expressgradeNo" column="express_grade_no"/>
+		<result property="expressType" column="express_type"/>
+		<result property="gradeId" column="grade_id"/>
+		<result property="gradeNm" column="grade_nm"/>
+		
+	</resultMap>	
+		 
+	<insert id="insert" parameterType="com.csstest.teamb.VO.expressgradeVO" useGeneratedKeys="true" keyProperty="expressgradeNo" >
+	insert into express_bus_grade(express_grade_no, express_type , grade_id, grade_nm )
+	values (#{expressgradeNo},#{expressType}, #{gradeId}, #{gradeNm});
+		
+	</insert>
+
+
+</mapper>
