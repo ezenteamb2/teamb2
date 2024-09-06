@@ -7,8 +7,13 @@ import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,8 +24,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -28,6 +36,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.csstest.teamb.VO.FlightInfoVO;
+import com.csstest.teamb.VO.expressVO;
 import com.csstest.teamb.VO.expressgradeVO;
 import com.csstest.teamb.VO.expressterVO;
 
@@ -36,10 +46,13 @@ import com.csstest.teamb.repository.expressgrade ;
 import com.csstest.teamb.repository.terexpress;
 
 
+
+
  
 
 
 @Controller
+@RequestMapping("/bus")
 public class ExpressbusController {
 	@Autowired
 	express exrepository;
@@ -52,6 +65,11 @@ public class ExpressbusController {
 	terexpress terexrepository;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	@RequestMapping(value = "/i.do", method = RequestMethod.GET)
+	public String I() throws Exception{
+		return "Bus2";
+	}
 	
 	@RequestMapping(value = "/expresster.do", method = RequestMethod.GET, produces = MediaType.APPLICATION_ATOM_XML_VALUE)
 	public String expressterAPI() throws IOException, ParserConfigurationException, SAXException {
@@ -133,6 +151,7 @@ public class ExpressbusController {
           
          texpress.setTerminalNm(getTagValue("terminalNm", eElement));
          texpress.setTerminalld(getTagValue("terminalId", eElement));
+         texpress.setArrterminalld(getTagValue("terminalId", eElement));
         
          texpress.setExpressType(1);
          terlist.add(texpress);
@@ -157,7 +176,7 @@ public class ExpressbusController {
 	        System.out.println(texpress);
 	    }
 	    
-	    return "bus";
+	    return "Bus2";
 	}
 	public static String getTagValue(String tag, Element eElement) {
 	    try {
@@ -269,13 +288,52 @@ public class ExpressbusController {
 	        System.out.println(gexpress);
 	    }
 	    
-	    return "bus";
+	    return "bus2";
 	}
 	
-	@RequestMapping(value = "/express.do", method = RequestMethod.GET, produces = MediaType.APPLICATION_ATOM_XML_VALUE)
-	public String expressAPI() throws IOException, ParserConfigurationException, SAXException {
+	@ResponseBody
+	@RequestMapping(value = "/express.do", method = RequestMethod.POST)
+	public Map<String, Object> expressAPI (Model model, @RequestParam(name="city", required=false) String city, @RequestParam(name="airport",required=false) String airport
+			, @RequestParam(name="expressType",required=false) String expressType
+			) throws IOException, ParserConfigurationException, SAXException {
+		Map<String,Object> map=new HashMap<>();
+		List<expressVO> eList = new ArrayList<>();
+		Map<String,String> paramMap=new HashMap<>();
 		
-	
+		paramMap.put("city", city);
+		paramMap.put("airport", airport);
+		if(expressType.equals("고속")) {
+			paramMap.put("expressType", "1");
+		}else {
+			paramMap.put("expressType", "0");
+		}
+			if (city ==  null || airport ==  null ) {
+	        //throw new IllegalArgumentException("터미널 ID가 존재하지 않습니다.");
+				map.put("data", "fail");
+				return map; 
+	} 
+		
+		String depTerminalId = terexrepository.getTerminalld(paramMap); // 예시 메소드
+		String arrTerminalId = terexrepository.getArrterminalld(paramMap); // 예시 메소드
+		
+		if (depTerminalId == null || arrTerminalId == null) {
+	        //throw new IllegalArgumentException("터미널 ID가 존재하지 않습니다.");
+		map.put("data", "fail");
+		return map; 
+	} 
+		
+		
+		LocalDate currentDate = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        String formattedDate = currentDate.format(formatter);
+		
+		System.out.println("depTerminalId::"+depTerminalId);
+		System.out.println("arrTerminalId::"+arrTerminalId);
+		System.out.println(formattedDate);
+		   
+		    
+		   
+		
 	int pageNo= 1;
      // Total pages, initialized to 1 to start the loop
     int totalCount = 0;
@@ -287,9 +345,9 @@ public class ExpressbusController {
 	StringBuilder urlBuilder = new StringBuilder(baseUrl); /*URL*/
        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "="+ serviceKey); /*Service Key*/
      
-       urlBuilder.append("&" + URLEncoder.encode("depTerminalId","UTF-8") + "=" + URLEncoder.encode("NAEK010", "UTF-8")); /*출발터미널ID*/
-      urlBuilder.append("&" + URLEncoder.encode("arrTerminalId","UTF-8") + "=" + URLEncoder.encode("NAEK300", "UTF-8")); /*도착터미널ID*/
-       urlBuilder.append("&" + URLEncoder.encode("depPlandTime","UTF-8") + "=" + URLEncoder.encode("20240820", "UTF-8")); /*출발일(YYYYMMDD)*/
+       urlBuilder.append("&" + URLEncoder.encode("depTerminalId","UTF-8") + "=" + URLEncoder.encode(depTerminalId, "UTF-8")); /*출발터미널ID*/
+       urlBuilder.append("&" + URLEncoder.encode("arrTerminalId","UTF-8") + "=" + URLEncoder.encode(arrTerminalId, "UTF-8")); /*도착터미널ID*/
+       urlBuilder.append("&" + URLEncoder.encode("depPlandTime","UTF-8") + "=" + URLEncoder.encode(formattedDate,"UTF-8")); /*출발일(YYYYMMDD)*/
       
        urlBuilder.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + pageNo);
        urlBuilder.append("&" + URLEncoder.encode("numOfRows", "UTF-8") + "=" + numOfRows);
@@ -350,17 +408,29 @@ public class ExpressbusController {
 					Node nNode = nList.item(temp);
 					
                 Element eElement=(Element) nNode;
+                expressVO evo = new expressVO();
+                evo.setGradeNm(getTagValue("gradeNm",eElement));
+                evo.setDepPlandTime(getTagValue("depPlandTime",eElement));
+                evo.setArrPlandTime(getTagValue("arrPlandTime",eElement));
+                evo.setDepPlaceNm(getTagValue("depPlaceNm",eElement));
+                evo.setArrPlaceNm(getTagValue("arrPlaceNm",eElement));
+                evo.setCharge(getTagValue("charge",eElement));
                 
-                System.out.println("버스등급:"+getTagValue("gradeNm",eElement));
-                System.out.println("출발시간:"+getTagValue("depPlandTime",eElement));
-                System.out.println("도착시간:"+getTagValue("arrPlandTime",eElement));
-                System.out.println("출발지:"+getTagValue("depPlaceNm",eElement));
-                System.out.println("도착지:"+getTagValue("arrPlaceNm",eElement));
-                System.out.println("요금:"+getTagValue("charge",eElement));
-                
+               eList.add(evo);
                
-				}	
+               if(!eList.isEmpty()) {
+			 		map.put("result", "success");
+			 		map.put("data",eList);
+			 		
+			 	}else {
+			 		map.put("result", "failed");
+			 	}
+               
+			 }
+			 
 			
+			 	
+			 
 			 if (pageNo * numOfRows >= totalCount) {
 		            break;
 		        }
@@ -368,12 +438,15 @@ public class ExpressbusController {
 		        // 페이지 번호 증가
 		        pageNo++;
 		        System.out.println("pageno: " + pageNo);
-		      
-			}
-		    
-		    return "bus";
+		        
+		        
+	}
+	return map;
+		
 	
 }
-	
-	
+	@RequestMapping(value = "/express.do", method = RequestMethod.GET)
+	public String ex()throws Exception{
+		return "Bus2";
+	}
 }

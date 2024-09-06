@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="expressterMapper">
+
+	<resultMap type="com.csstest.teamb.VO.expressterVO" id="expresster">
+		<id property="expressterNo" column="express_terminal_no"/>
+		<result property="expressType" column="express_type"/>
+		<result property="terminalld" column="terminal_id"/>
+		<result property="terminalNm" column="terminal_nm"/>
+		
+	</resultMap>	
+		
+	<insert id="insert" parameterType="com.csstest.teamb.VO.expressterVO" useGeneratedKeys="true" keyProperty="expressterNo" >
+	insert into express_bus_terminal(express_terminal_no, express_type , terminal_id, terminal_nm )
+	values (#{expressterNo},#{expressType}, #{terminalld}, #{terminalNm});
+		
+	</insert>
+	<select id="selectAllCity" resultType="String" parameterType="HashMap">
+	 SELECT terminal_id FROM express_bus_terminal WHERE express_type = #{expressType} And terminal_nm =#{city} limit 0,1;
+	</select>
+	
+	
+	<select id="selectAllAirport" resultType="String" parameterType="HashMap">
+	 SELECT terminal_id FROM express_bus_terminal WHERE express_type = #{expressType} And terminal_nm =#{airport} limit 0,1;
+	</select>
+</mapper>

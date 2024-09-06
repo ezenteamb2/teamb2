@@ -1,5 +1,7 @@
 package com.csstest.teamb.repository;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -31,7 +33,10 @@ public class express{
 	}
 	
 	
-
+	public List<expressVO> selectAll() {
+		
+		return sqlSessionTemplate.selectList(NAME_SPACE+".selectAll");
+	}
 	
 	
 	
