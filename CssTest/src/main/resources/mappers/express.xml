@@ -9,11 +9,17 @@
 		<result property="depPlaceNm" column="dep_name" />
 		<result property="arrPlaceNm" column="arr_name" />
 		<result property="expressType" column="express_type" />
+		<result property="dep" column="dep" />
+		<result property="charge" column="charge" />
 	</resultMap>
  
 	<insert id="insert" parameterType="com.csstest.teamb.VO.expressVO" useGeneratedKeys="true" keyProperty="expressNo">
-		insert into express_bus(express_no, grade_nm,  dep_time, arr_time, dep_name, arr_name ,express_type) 
-		values(#{expressNo}, #{gradeNm},  #{depPlandTime}, #{arrPlandTime}, #{depPlaceNm}, #{arrPlaceNm}, #{expressType})
+		insert into express_bus(express_no, grade_nm,  dep_time, arr_time, dep_name, arr_name ,express_type, charge) 
+		values(#{expressNo}, #{gradeNm},  #{depPlandTime}, #{arrPlandTime}, #{depPlaceNm}, #{arrPlaceNm}, #{expressType}, #{charge})
 				
 	</insert>
+	<select id="selectAll" resultMap="express">
+	SELECT * FROM express_bus WHERE express_type = #{expressType};
+	</select>
+	
 </mapper>

@@ -8,6 +8,23 @@ public class expressVO {
 	private String arrPlandTime;
 	private String depPlaceNm;
 	private String arrPlaceNm;
+	private String dep;
+	private String charge;
+	
+	
+	public String getCharge() {
+		return charge;
+	}
+	public void setCharge(String charge) {
+		this.charge = charge;
+	}
+	public String getDep() {
+		return dep;
+	}
+	public void setDep(String dep) {
+		this.dep = dep;
+	}
+
 	private int expressType;
 	
 	 

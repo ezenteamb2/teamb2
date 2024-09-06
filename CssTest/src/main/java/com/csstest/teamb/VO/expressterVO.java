@@ -5,6 +5,22 @@ public class expressterVO {
 	private String expressterNo;
 	private int expressType;
 	private String terminalld;
+	private String arrterminalld;
+	public String getArrterminalld() {
+		return arrterminalld;
+	}
+	public void setArrterminalld(String arrterminalld) {
+		this.arrterminalld = arrterminalld;
+	}
+
+
+
+
+
+
+
+
+
 	private String terminalNm;
 	 
 	public String getExpressterNo() {

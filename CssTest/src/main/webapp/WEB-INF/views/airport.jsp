@@ -234,7 +234,7 @@ body
    
    
     <li class="footer">
-      <span>Departures</span>
+      <span>Departures/Arrivals</span>
     </li>
   </ul>
  
@@ -356,7 +356,7 @@ body
    
    
     <li class="footer">
-      <span>Departures</span>
+      <span>Departures/Arrivals</span>
     </li>
   </ul>
  

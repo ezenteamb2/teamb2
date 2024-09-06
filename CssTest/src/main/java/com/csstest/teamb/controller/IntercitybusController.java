@@ -7,8 +7,12 @@ import java.io.StringReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -19,8 +23,11 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -28,6 +35,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import com.csstest.teamb.VO.expressVO;
 import com.csstest.teamb.VO.expressgradeVO;
 import com.csstest.teamb.VO.expressterVO;
 import com.csstest.teamb.repository.express;
@@ -39,6 +47,7 @@ import com.csstest.teamb.repository.terexpress;
 
 
 @Controller
+@RequestMapping("/bus")
 public class IntercitybusController {
 	@Autowired
 	express exrepository;
@@ -269,9 +278,61 @@ public class IntercitybusController {
 	    
 	    return "bus";
 	}
-	@RequestMapping(value = "/intercity.do", method = RequestMethod.GET, produces = MediaType.APPLICATION_ATOM_XML_VALUE)
-	public String intercityAPI() throws IOException, ParserConfigurationException, SAXException {
-	int pageNo= 1;
+	@ResponseBody
+	@RequestMapping(value = "/intercity.do", method = RequestMethod.POST)
+	public Map<String, Object> intercityAPI(Model model, 
+			@RequestParam(name="city", required=false) String city, 
+			@RequestParam(name="airport",required=false) String airport,
+			@RequestParam(name="expressType",required=false) String expressType
+			
+			)
+		throws IOException, ParserConfigurationException, SAXException {
+	 
+		Map<String,Object> map=new HashMap<>();
+		List<expressVO> eList = new ArrayList<>();
+		Map<String,String> paramMap=new HashMap<>();
+		paramMap.put("city", city);
+		
+		if(airport.equals("인천공항T1")){
+			paramMap.put("airport", "인천공항1터미널");
+		}else if(airport.equals("인천공항T2")){
+			paramMap.put("airport", "인천공항2터미널");
+		}else if(airport.equals("김해")) {
+			paramMap.put("airport", "김해공항");
+		}
+		
+		//paramMap.put("airport", airport);
+		
+		if(expressType.equals("고속")) {
+			paramMap.put("expressType", "1");
+		}else {
+			paramMap.put("expressType", "0");
+		}
+		
+		
+		String depTerminalId = terexrepository.getTerminalld(paramMap); // 예시 메소드
+		String arrTerminalId = terexrepository.getArrterminalld(paramMap); // 예시 메소드
+		
+		LocalDate currentDate = LocalDate.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
+        String formattedDate = currentDate.format(formatter);
+		
+		System.out.println("depTerminalId::"+depTerminalId);
+		System.out.println("arrTerminalId::"+arrTerminalId);
+		System.out.println(formattedDate);
+		
+		
+		
+		if (depTerminalId == null || arrTerminalId == null) {
+		        //throw new IllegalArgumentException("터미널 ID가 존재하지 않습니다.");
+			map.put("data", "fail");
+			return map; 
+		}
+			
+		
+		
+		
+		int pageNo= 1;
 	    // Total pages, initialized to 1 to start the loop
 	int totalCount = 0;
 	int numOfRows = 10; 
@@ -285,10 +346,10 @@ public class IntercitybusController {
        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "="+ serviceKey); /*Service Key*/
        urlBuilder.append("&" + URLEncoder.encode("numOfRows", "UTF-8") + "=" + numOfRows);
        urlBuilder.append("&" + URLEncoder.encode("pageNo", "UTF-8") + "=" + pageNo); /*페이지번호*/
-       urlBuilder.append("&" + URLEncoder.encode("_type","UTF-8") + "=" + URLEncoder.encode("xml", "UTF-8")); /*데이터 타입(xml, json)*/
-       urlBuilder.append("&" + URLEncoder.encode("depTerminalId","UTF-8") + "=" + URLEncoder.encode("NAI0671801", "UTF-8")); /*출발터미널ID*/
-       urlBuilder.append("&" + URLEncoder.encode("arrTerminalId","UTF-8") + "=" + URLEncoder.encode("NAI3214401", "UTF-8")); /*도착터미널ID*/
-       urlBuilder.append("&" + URLEncoder.encode("depPlandTime","UTF-8") + "=" + URLEncoder.encode("20230401", "UTF-8")); /*출발일(YYYYMMDD)*/
+      
+       urlBuilder.append("&" + URLEncoder.encode("depTerminalId","UTF-8") + "=" + URLEncoder.encode(depTerminalId, "UTF-8")); /*출발터미널ID*/
+       urlBuilder.append("&" + URLEncoder.encode("arrTerminalId","UTF-8") + "=" + URLEncoder.encode(arrTerminalId, "UTF-8")); /*도착터미널ID*/
+       urlBuilder.append("&" + URLEncoder.encode("depPlandTime","UTF-8") + "=" + URLEncoder.encode(formattedDate, "UTF-8")); /*출발일(YYYYMMDD)*/
       // urlBuilder.append("&" + URLEncoder.encode("busGradeId","UTF-8") + "=" + URLEncoder.encode("IDG", "UTF-8")); /*버스등급*/
       
        URL url = new URL(urlBuilder.toString());
@@ -347,16 +408,25 @@ public class IntercitybusController {
 					Node nNode = nList.item(temp);
 					
                 Element eElement=(Element) nNode;
+              
+                expressVO evo = new expressVO();
+                evo.setGradeNm(getTagValue("gradeNm",eElement));
+                evo.setDepPlandTime(getTagValue("depPlandTime",eElement));
+                evo.setArrPlandTime(getTagValue("arrPlandTime",eElement));
+                evo.setDepPlaceNm(getTagValue("depPlaceNm",eElement));
+                evo.setArrPlaceNm(getTagValue("arrPlaceNm",eElement));
+                evo.setCharge(getTagValue("charge",eElement));
                 
-                System.out.println("버스등급:"+getTagValue("gradeNm",eElement));
-                System.out.println("출발시간:"+getTagValue("depPlandTime",eElement));
-                System.out.println("도착시간:"+getTagValue("arrPlandTime",eElement));
-                System.out.println("출발지:"+getTagValue("depPlaceNm",eElement));
-                System.out.println("도착지:"+getTagValue("arrPlaceNm",eElement));
-                System.out.println("요금:"+getTagValue("charge",eElement));
+              	eList.add(evo);
                 
-               
-				}	
+              	 if(!eList.isEmpty()) {
+ 			 		map.put("result", "success");
+ 			 		map.put("data",eList);
+ 			 		
+ 			 	}else {
+ 			 		map.put("result", "failed");
+ 			 	}
+			}	
 			
 			 if (pageNo * numOfRows >= totalCount) {
 		            break;
@@ -372,9 +442,12 @@ public class IntercitybusController {
 				
 			}
 		    
-		    return "bus";
+		    return map;
 		
 	
 	}
-
+	@RequestMapping(value = "/intercity.do", method = RequestMethod.GET)
+	public String ex()throws Exception{
+		return "Bus2";
+	}
 }
