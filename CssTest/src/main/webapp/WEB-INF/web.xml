@@ -6,7 +6,10 @@
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>/WEB-INF/spring/root-context.xml</param-value>
+		<param-value>
+			/WEB-INF/spring/root-context.xml
+			/WEB-INF/spring/security-context.xml
+		</param-value>
 	</context-param>
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
@@ -47,5 +50,23 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+	<!-- 에러 페이지 설정 -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error/404code.jsp</location>
+	</error-page>
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error/Othercode.jsp</location>
+	</error-page>
+	<error-page>
+  		<exception-type>java.lang.NullPointerException</exception-type>
+  		<location>/error/Othercode.jsp</location>
+  	</error-page>
+  	
+  	<session-config>
+  		<track-mode>COOKIE</track-mode>
+  	</session-config>
 
 </web-app>

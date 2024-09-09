@@ -10,9 +10,8 @@ $(function(){
 		$(".Real_Time_div").css("color","#009c75");
 		$(".Schedule_div").css("color","black");
 	});
-
-
-
+	
+	
 	
 	/* 출발시간 선택 */
 	$(".select_seat_div").on("click",function(){
@@ -271,8 +270,8 @@ $(function(){
 	
 	/* 대한민국 태그 */
 	$("#Korea_start").on("click",function(){
-		$("#Korea_start").css("border","1px solid #009C75");
-		$("#Korea_start").css("background","#e9fbf7");
+		$("#Korea_start").css("border","1px solid #4B73E1");
+		$("#Korea_start").css("background","#f3f6fd");
 		$("#Korea").css("display","inline-block");
 		
 		$("#Southeast_Asia_start").css("border","0px");
@@ -304,8 +303,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#Southeast_Asia_start").css("visibility", "visible");
 		$("#Southeast_Asia_start").on("click",function(){
-			$("#Southeast_Asia_start").css("border","1px solid #009C75");
-			$("#Southeast_Asia_start").css("background","#e9fbf7");
+			$("#Southeast_Asia_start").css("border","1px solid #4B73E1");
+			$("#Southeast_Asia_start").css("background","#f3f6fd");
 			$("#Southeast_Asia").css("display","inline-block");
 			
 			$("#Korea_start").css("border","0px");
@@ -342,8 +341,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#Japan_start").css("visibility", "visible");
 		$("#Japan_start").on("click",function(){
-			$("#Japan_start").css("border","1px solid #009C75");
-			$("#Japan_start").css("background","#e9fbf7");
+			$("#Japan_start").css("border","1px solid #4B73E1");
+			$("#Japan_start").css("background","#f3f6fd");
 			$("#Japan").css("display","inline-block");
 			
 			$("#Korea_start").css("border","0px");
@@ -378,8 +377,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#China_start").css("visibility", "visible");
 		$("#China_start").on("click",function(){
-			$("#China_start").css("border","1px solid #009C75");
-			$("#China_start").css("background","#e9fbf7");
+			$("#China_start").css("border","1px solid #4B73E1");
+			$("#China_start").css("background","#f3f6fd");
 			$("#China").css("display","inline-block");
 			
 			$("#Korea_start").css("border","0px");
@@ -414,8 +413,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#Europe_start").css("visibility", "visible");
 		$("#Europe_start").on("click",function(){
-			$("#Europe_start").css("border","1px solid #009C75");
-			$("#Europe_start").css("background","#e9fbf7");
+			$("#Europe_start").css("border","1px solid #4B73E1");
+			$("#Europe_start").css("background","#f3f6fd");
 			$("#Europe").css("display","inline-block");
 			
 			$("#Korea_start").css("border","0px");
@@ -450,8 +449,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#Americas_start").css("visibility", "visible");
 		$("#Americas_start").on("click",function(){
-			$("#Americas_start").css("border","1px solid #009C75");
-			$("#Americas_start").css("background","#e9fbf7");
+			$("#Americas_start").css("border","1px solid #4B73E1");
+			$("#Americas_start").css("background","#f3f6fd");
 			$("#Americas").css("display","inline-block");
 			
 			$("#Korea_start").css("border","0px");
@@ -485,8 +484,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#Oceania_start").css("visibility", "visible");
 		$("#Oceania_start").on("click",function(){
-			$("#Oceania_start").css("border","1px solid #009C75");
-			$("#Oceania_start").css("background","#e9fbf7");
+			$("#Oceania_start").css("border","1px solid #4B73E1");
+			$("#Oceania_start").css("background","#f3f6fd");
 			$("#Oceania").css("display","inline-block");      
 			
 			$("#Korea_start").css("border","0px");
@@ -521,8 +520,8 @@ $(function(){
 			$(".select_people").text() == "제주" || $(".select_people").text() == "목적지 선택") {
 		$("#Middle_East_start").css("visibility", "visible");
 		$("#Middle_East_start").on("click",function(){
-			$("#Middle_East_start").css("border","1px solid #009C75");
-			$("#Middle_East_start").css("background","#e9fbf7");
+			$("#Middle_East_start").css("border","1px solid #4B73E1");
+			$("#Middle_East_start").css("background","#f3f6fd");
 			$("#Middle_East").css("display","inline-block");
 			
 			$("#Korea_start").css("border","0px");
@@ -590,8 +589,8 @@ $(function(){
 	
 	/* 대한민국 태그 */
 	$("#Korea_tag").on("click",function(){
-		$("#Korea_tag").css("border","1px solid #009C75");
-		$("#Korea_tag").css("background","#e9fbf7");
+		$("#Korea_tag").css("border","1px solid #4B73E1");
+		$("#Korea_tag").css("background","#f3f6fd");
 		$("#Korea_div").css("display","inline-block");
 		
 		$("#Southeast_Asia_tag").css("border","0px");
@@ -623,8 +622,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#Southeast_Asia_tag").css("visibility", "visible");
 		$("#Southeast_Asia_tag").on("click",function(){
-			$("#Southeast_Asia_tag").css("border","1px solid #009C75");
-			$("#Southeast_Asia_tag").css("background","#e9fbf7");
+			$("#Southeast_Asia_tag").css("border","1px solid #4B73E1");
+			$("#Southeast_Asia_tag").css("background","#f3f6fd");
 			$("#Southeast_Asia_div").css("display","inline-block");
 			
 			$("#Korea_tag").css("border","0px");
@@ -660,8 +659,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#japan_tag").css("visibility", "visible");
 		$("#japan_tag").on("click",function(){
-			$("#japan_tag").css("border","1px solid #009C75");
-			$("#japan_tag").css("background","#e9fbf7");
+			$("#japan_tag").css("border","1px solid #4B73E1");
+			$("#japan_tag").css("background","#f3f6fd");
 			$("#japan_div").css("display","inline-block");
 			
 			$("#Korea_tag").css("border","0px");
@@ -696,8 +695,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#china_tag").css("visibility", "visible");
 		$("#china_tag").on("click",function(){
-			$("#china_tag").css("border","1px solid #009C75");
-			$("#china_tag").css("background","#e9fbf7");
+			$("#china_tag").css("border","1px solid #4B73E1");
+			$("#china_tag").css("background","#f3f6fd");
 			$("#china_div").css("display","inline-block");
 			
 			$("#Korea_tag").css("border","0px");
@@ -732,8 +731,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#europe_tag").css("visibility", "visible");
 		$("#europe_tag").on("click",function(){
-			$("#europe_tag").css("border","1px solid #009C75");
-			$("#europe_tag").css("background","#e9fbf7");
+			$("#europe_tag").css("border","1px solid #4B73E1");
+			$("#europe_tag").css("background","#f3f6fd");
 			$("#europe_div").css("display","inline-block");
 			
 			$("#Korea_tag").css("border","0px");
@@ -768,8 +767,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#Americas_tag").css("visibility", "visible");
 		$("#Americas_tag").on("click",function(){
-			$("#Americas_tag").css("border","1px solid #009C75");
-			$("#Americas_tag").css("background","#e9fbf7");
+			$("#Americas_tag").css("border","1px solid #4B73E1");
+			$("#Americas_tag").css("background","#f3f6fd");
 			$("#Americas_div").css("display","inline-block");
 			
 			$("#Korea_tag").css("border","0px");
@@ -804,8 +803,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#Oceania_tag").css("visibility", "visible");
 		$("#Oceania_tag").on("click",function(){
-			$("#Oceania_tag").css("border","1px solid #009C75");
-			$("#Oceania_tag").css("background","#e9fbf7");
+			$("#Oceania_tag").css("border","1px solid #4B73E1");
+			$("#Oceania_tag").css("background","#f3f6fd");
 			$("#Oceania_div").css("display","inline-block");      
 			
 			$("#Korea_tag").css("border","0px");
@@ -840,8 +839,8 @@ $(function(){
 			$(".start_result").text() == "제주" || $(".start_result").text() == "출발지 선택") {
 		$("#Middle_East_tag").css("visibility", "visible");
 		$("#Middle_East_tag").on("click",function(){
-			$("#Middle_East_tag").css("border","1px solid #009C75");
-			$("#Middle_East_tag").css("background","#e9fbf7");
+			$("#Middle_East_tag").css("border","1px solid #4B73E1");
+			$("#Middle_East_tag").css("background","#f3f6fd");
 			$("#Middle_East_div").css("display","inline-block");
 			
 			$("#Korea_tag").css("border","0px");

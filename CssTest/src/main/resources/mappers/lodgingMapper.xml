@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="lodgingMapper">
+	
+	<resultMap type="com.csstest.teamb.VO.lodgingVO" id="lodging">
+		<id property="lodgingNo" column="lodgingNo"/>
+		<result property="title" column="title"/>
+		<result property="latitude" column="latitude"/>
+		<result property="hardness" column="hardness"/>
+		<result property="lodging_img" column="lodging_img"/>
+		<result property="addr" column="addr"/>
+		<result property="zip_code" column="zip_code"/>
+		<result property="street_number" column="street_number"/>
+ 	</resultMap>
+ 		
+ 		
+	<select id="select_lodging" resultMap="lodging">
+		SELECT * FROM lodging;
+	</select>
+
+</mapper>

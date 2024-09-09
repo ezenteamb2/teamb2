@@ -1,8 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+
+<%@ include file="/include/header.jsp" %>
 
 <!-- css -->
 <link rel="stylesheet" href="<c:url value='/resources/css/test2.css' />" rel="stylesheet">
@@ -16,12 +15,7 @@
 <!-- icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-
-</head>
-<body>
-
+<%@ include file="/include/ChatBot.jsp" %>
 <!-- 전체 div -->
 <div class="reservation_div">
 		
@@ -32,17 +26,24 @@
 			운항 스케줄
 		</div>
 		<div class="Real_Time_div">
-			<a href="<c:url value='/airport.do'/>">실시간</a>
+			<a href="<c:url value='/airport.do'/>" style="text-decoration: none;">실시간</a>
 		</div>
+		<c:if test="${not empty loggedInUser}">
+			<c:if test="${userRole == 1}">
+				<div style="margin-left: 20px;width: 500px; display: inline-block;">
+					<button type="button" class="btn btn-light" onclick="flightSchUp()">운항 스케줄 업데이트</button>
+				</div>
+			</c:if>
+		</c:if>
 	</div>
 	
 <div style="display: flex; align-items: center; gap: 5px; flex-direction: column; width: fit-content; margin: auto;">
-	<div class="select-container">
+	<div class="select-container" style="position: relative;">
 								<!---------------------------------- 출발지 선택 ---------------------------------->	
 		<!-- 출발지 선택 div -->
 		<div class="select_startDiv">
 			
-			<img src="<c:url value='/resources/img/airport/startAir.png'/>" class="start_img" >
+			<img src="<c:url value='/resources/img/airport/startAir.png'/>" class="start_img">
 			<div class="start_result">출발지 선택</div>
 			
 		</div>
@@ -56,7 +57,7 @@
 				<div>
 					<!-- 나라 -->
 					<div style="width: 170px; height: 450px; border-right: 1px solid #d0d0d0; display : inline-block;">
-						<diV class="start_country" id="Korea_start" style="border : 1px solid #009C75; background : #e9fbf7;">대한민국</div>
+						<diV class="start_country" id="Korea_start" style="border : 1px solid #4B73E1; background : #f3f6fd;">대한민국</div>
 						<diV class="start_country" id="Southeast_Asia_start">동남아</div>
 						<diV class="start_country" id="Japan_start">일본</div>
 						<diV class="start_country" id="China_start">중국/홍콩</div>
@@ -263,7 +264,7 @@
 				<div>
 					<!-- 나라 -->
 					<div style="width: 170px; height: 450px; border-right: 1px solid #d0d0d0; display : inline-block;">
-						<diV class="country_tag" id="Korea_tag" style="border : 1px solid #009C75; background : #e9fbf7;">대한민국</div>
+						<diV class="country_tag" id="Korea_tag" style="border : 1px solid #4B73E1; background : #f3f6fd;">대한민국</div>
 						<diV class="country_tag" id="Southeast_Asia_tag">동남아</div>
 						<diV class="country_tag" id="japan_tag">일본</div>
 						<diV class="country_tag" id="china_tag">중국/홍콩</div>
@@ -507,7 +508,7 @@
 		
 			<img src="<c:url value='/resources/img/airport/startTime.png'/>" class="startTime_img">
 			<div class="select_seat">
-				시작시간
+				출발시간
 			</div>
 			
 			
@@ -543,12 +544,12 @@
 		<div class="select_seat_div2">
 			<img src="<c:url value='/resources/img/airport/endTime.png'/>" class="endTime_img">		
 			<div class="select_endTime">
-				종료시간
+				도착시간
 			</div>
 		</div>
 		
 		<div class="select_endTimeBox" style=" display : none">
-				<div style="font-size : 16px;">종료시간 선택</div>
+				<div style="font-size : 16px;">도착시간 선택</div>
 				
 				<div style="margin-top: 40px;">
 					<c:forEach var="i" begin="0" end="23">
@@ -594,6 +595,26 @@
 </div>
 
 	<script type="text/javascript">
+		/*비행기 운항 스케줄 업데이트*/
+		function flightSchUp() {
+		    $.ajax({
+		        url: "<c:url value='/air/flightSchUp'/>",
+		        method: "post",
+		        success: function(data) {
+		            if (data === "success") {
+		                alert("업데이트에 성공했습니다.");
+		            } else {
+		                alert("업데이트에 실패했습니다.");
+		            }
+		        },
+		        error: function(xhr, status, error) {
+		            alert("서버 오류: " + error);
+		        }
+		    });
+		}
+
+	
+	
 		/*검색*/
 		$(".submit-btn").on("click", function() {
 			$(".select_startBox").css("display","none");
@@ -615,12 +636,12 @@
 				return;
 			}
 			if(departureCity.val().trim() == "") {
-				alert("출발 공항을 선택하세요");
+				alert("출발지를 선택하세요");
 				departureCity.focus;
 				return;
 			}
 			if(arrivalCity.val().trim() == "") {
-				alert("도착 공항을 선택하세요");
+				alert("목적지를 선택하세요");
 				arrivalCity.focus;
 				return;
 			}

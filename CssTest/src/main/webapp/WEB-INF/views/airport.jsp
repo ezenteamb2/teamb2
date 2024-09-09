@@ -1,21 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <link rel="stylesheet" href="<c:url value='/resources/css/bootstrap.css'/>">
 <script src="<c:url value='/resources/js/jquery-3.7.1.min.js'/>"></script>
      <script src="<c:url value='/resources/js/bootstrap.bundle.min.js'/>"></script>
 <link rel="stylesheet" href="resources/css/departureboard.css">
 
-<title>Insert title here</title>
+<%@ include file="/include/header.jsp" %>
+
 <style>
  
 body
 {
   background-color:#f1f1f2;
+  background:white;
 }
 .tile
 {
@@ -38,7 +38,7 @@ body
 {
   position:relative;
   border:none!important;
-  background-color:#fff;
+  background-color: #f1f1f2;
 /*   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
   border-radius:6px;
 }
@@ -57,7 +57,7 @@ body
 }
 #tile-1 .nav-tabs a:hover
 {
-  background-color:#fff!important;
+  background-color: #d3d3d3 !important;
   border:none;
 }
 #tile-1 .slider
@@ -81,9 +81,9 @@ body
 }
 
 </style>
-<body>
 
 
+<%@ include file="/include/ChatBot.jsp" %>
 
 
 <div class="tile" id="tile-1">

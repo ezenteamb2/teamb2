@@ -35,7 +35,7 @@
 			start_city, start_city_code, start_time, flight_purpose, sun, mon, tue, wed, thu, fri, sat, is_domestic
 		) values(
 			#{airlineEng}, #{airlineKor}, #{arrivalCity}, #{arrivalCityCode}, #{arrivalTime}, #{flightNum},
-			#{startCity}, #{startCityCode}, #{startTime}, #{flightPurpose}, #{sun}, #{mon}, #{tue}, #{wed}, #{thu}, #{fri}, #{sat}, #{isDomestic}
+			#{startCity}, #{startCityCode}, #{startTime}, #{flightPurpose}, #{sun}, #{mon}, #{tue}, #{wed}, #{thu}, #{fri}, #{sat}, #{domestic}
 		);
 	</insert>
 	
@@ -45,7 +45,7 @@
 			flight_purpose,	sch_time, io_type, sun, mon, tue, wed, thu, fri, sat, is_domestic
 		) values(
 			#{airlineEng}, #{airlineKor}, #{city}, #{cityCode}, #{flightNum}, #{airport}, #{airportCode},
-			#{flightPurpose}, #{schTime}, #{ioType}, #{sun}, #{tue}, #{tue}, #{wed}, #{thu}, #{fri}, #{sat}, #{isDomestic}
+			#{flightPurpose}, #{schTime}, #{ioType}, #{sun}, #{tue}, #{tue}, #{wed}, #{thu}, #{fri}, #{sat}, #{domestic}
 		);
 	</insert>
 	
