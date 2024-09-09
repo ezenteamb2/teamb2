@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mappers.userMapper">
+	<resultMap type="com.csstest.teamb.VO.userVO" id="userMap">
+		<id column="user_no" property="userNo"/>
+		<result column="nickname" property="nickname" />
+		<result column="id" property="id" />
+		<result column="pw" property="pw" />
+		<result column="address" property="address" />
+		<result column="role" property="role" />
+	</resultMap>
+	
+	<insert id="insertUser" parameterType="com.csstest.teamb.VO.userVO" useGeneratedKeys="true" keyProperty="int" keyColumn="userNo">
+        INSERT INTO user (nickname, id, pw, address, role)
+        VALUES (#{nickname}, #{id}, #{pw}, #{address}, #{role})
+    </insert>
+    
+    <select id="idCheck" parameterType="String" resultType="Integer">
+    	select count(*) from user where id = #{id}
+    </select>
+    
+    <select id="nicknameCheck" parameterType="String" resultType="Integer">
+    	select count(*) from user where nickname = #{nickname}
+    </select>
+    
+    <select id="login" parameterType="com.csstest.teamb.VO.userVO" resultMap="userMap">
+    	select * from user where id = #{id} and pw = #{pw}
+    </select>
+    
+    <select id="findById" parameterType="String" resultType="com.csstest.teamb.VO.userVO">
+    	select * from user where id = #{id}
+    </select>
+    
+    <select id="findUser" parameterType="com.csstest.teamb.VO.userVO" resultType="com.csstest.teamb.VO.userVO">
+    	select * from user where id = #{id} and nickname = #{nickname}
+    </select>
+    
+    <select id="getAllUser" resultMap="userMap">
+    	select * from user where role = 0;
+    </select>
+    
+    <update id="modifyPw" parameterType="com.csstest.teamb.VO.userVO">
+    	update user set pw = #{pw} where id = #{id}
+    </update>
+    
+    <update id="editProfile" parameterType="com.csstest.teamb.VO.userVO">
+    	update user set address = #{address} where id = #{id}
+    </update>
+    
+    <delete id="deleteUser" parameterType="String">
+    	delete from user where id = #{id}
+    </delete>
+</mapper>

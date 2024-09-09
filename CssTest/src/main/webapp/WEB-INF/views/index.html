@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1:1 채팅방</title>
+    
+<style>
+
+@font-face {
+    font-family: 'PTBandocheB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408@1.0/PTBandocheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BMJUA';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@keyframes slide-in-left {
+  0% {
+            transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes slide-in-right {
+  0% {
+            transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+            transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes text-focus-in {
+  0% {
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+
+
+
+
+        #container {
+            width: 400px;
+            height: 625px;
+            background-color: #cdc1ff;
+            background-image: linear-gradient(316deg, #cdc1ff 0%, #e5d9f2 74%);
+            border-radius: 10px;
+            box-shadow: 0px 0px 9px 0px;
+            overflow: hidden;
+        }
+        #chatView {
+            height: 91%;
+            overflow-y: scroll;
+            width: 102%;
+            overflow-x: hidden;
+        }
+        #chatView::-webkit-scrollbar{
+	        width: 6px;
+        }
+        #chatView::-webkit-scrollbar-thumb{
+	        background-color: #9e9e9e;
+            border-radius: 5px;
+        }
+        #chatForm {
+            height: 10%;
+            text-align: center;
+            padding: 10px 10px;
+            background: white;
+        }
+        #msg {
+            width: 80%;
+            height: 32px;
+            border-radius: 8px;
+            border: 3px solid #9d86ff;
+            float: left;
+            
+        }
+        #send {
+            width: 16%;
+            height: 34px;
+            border-radius: 50px;
+            color: white;
+            border: 0px;
+            background: #9d86ff;
+            position: relative;
+            top: 3px;
+            left: 5px;
+            font-family: 'PTBandocheB';
+        }
+        #send:hover {
+            background: #a89ed0;
+            cursor: pointer;
+        }
+        #send:active {
+            background: #615c77;
+        }
+        .msgLine {
+            margin: 15px;
+         }
+        .msgBox {
+            background: white;
+            padding: 5px 11px;
+            border-radius: 10px;
+            font-family: 'PTBandocheB';
+            max-width: 245px;
+            word-break: break-all;
+            animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        .mymsgBox {
+            background: white;
+            padding: 5px 11px;
+            border-radius: 10px;
+            font-family: 'PTBandocheB';
+            max-width: 245px;
+            word-break: break-all;
+            animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+        .guide_box{
+            margin: 3px 0px;
+            width: 400px;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            font-family: 'PTBandocheB';
+            color: #00000080;
+            font-size: 13px;
+        }
+        .Mytimeline{
+            font-family: 'BMJUA';
+            font-size: 12px;
+            margin-right: 5px;
+            position: relative;
+            top: 5px;
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+        }
+        .timeline{
+            animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            font-family: 'BMJUA';
+            margin-left: 5px;
+            position: relative;
+            top: 5px;
+            font-size: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="chatView">
+ 
+        </div>
+        <form id="chatForm" onsubmit="return false">
+            <input type="text" id="msg" maxlength='500'>
+            <input type="submit" id="send" value="전송">
+        </form>
+    </div>
+    
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+ 
+    <script>
+
+        function showClock(date){
+        	var year = date.getFullYear();
+
+            var h = date.getHours();
+            hh = h>=10 ? h : "0" + h;
+
+            var ap = date.getHours();
+            app = h>=12 ? "오후" : "오전";
+
+            var m = date.getMinutes();
+            mm = m>10 ? m : "0" + m;
+
+            return  app+" "+ hh + ":" + mm;
+        }
+        
+        var socket = io();
+            
+        var chatView = document.getElementById('chatView');
+        var chatForm = document.getElementById('chatForm');
+     
+        chatForm.addEventListener('submit', function() {
+            var msg = $('#msg');
+     
+            if (msg.val() == '') {
+                return;
+                    
+            } else {
+                socket.emit('SEND', msg.val());
+     
+                var msgLine = $('<div class="msgLine">');
+                var msgBox = $('<div class="mymsgBox" style="background : rgb(188 130 255); color : white;">');
+                var timeline = $("<time datetime='" + showClock(new Date()) + "' class='Mytimeline' />");
+
+                msgBox.append(msg.val());
+                timeline.append(showClock(new Date()));
+                msgBox.css('display', 'inline-block');
+
+                msgLine.css('text-align', 'right');
+                msgLine.append(timeline);
+                msgLine.append(msgBox);
+                
+                $('#chatView').append(msgLine);
+     
+                msg.val('');
+                chatView.scrollTop = chatView.scrollHeight;
+            }
+        });
+     
+        socket.on('SEND', function(msg) {
+            var msgLine = $('<div class="msgLine">');
+            var msgBox = $('<div class="msgBox" style="background: rgb(130 102 255); color:white;">');
+            var timeline = $("<time datetime='" + showClock(new Date()) + "' class='timeline' />");
+                
+            msgBox.append(msg);
+            timeline.append(showClock(new Date()));
+            msgBox.css('display', 'inline-block');
+     
+            
+            msgLine.append(msgBox);
+            msgLine.append(timeline);
+            $('#chatView').append(msgLine);
+     
+            chatView.scrollTop = chatView.scrollHeight;
+        });
+
+        socket.on('receive message', function(msg){
+            var msgLine = $('<div>');
+            var msgBox = $('<div class="guide_box">');
+            
+	        msgBox.append(msg);
+            msgBox.css('display', 'inline-block');
+     
+            msgLine.append(msgBox);
+            $('#chatView').append(msgLine);
+        });
+
+
+    </script>
+</body>
+</html>

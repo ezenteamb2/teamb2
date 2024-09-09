@@ -60,6 +60,8 @@
 			
 		})
 		
+		
+		
 	})
 
 </script>
@@ -71,8 +73,8 @@
 		<div style="font-size: 25px;">
 			공항근처 숙소찾기
 		</div>
-		
-		<div style="margin-top: 80px; margin-bottom: -4px; position: relative; right: 290px; display: inline-block;">
+    
+		<div style="margin-top: 80px; margin-bottom: -4px; position: relative; right: 198px; display: inline-block; top: 6px;">
 			<div class="airport_tag" id="lodging_tag1" style="z-index: 2; background: #65728a; color:white;">
 				인천
 			</div>
@@ -90,13 +92,21 @@
 			</div>
 		</div>
 		
+		<div class="airport_tag" id="my_address" style="cursor: default;">
+			내 주소찾기
+			<img src="<c:url value='/resources/img/lodging_img/construction_zone.png'/>" style="position: absolute; width: 77px; bottom: 7px; right: 126px;">
+			<img src="<c:url value='/resources/img/lodging_img/construction_zone2.png'/>" style="position: absolute; width: 40px; bottom: -2px; right: -13px;">
+		</div>
+		
 		<div class="map_border">
 		
 		</div>
 		
+		<div id="clickLatlng"></div>
+		
 		<div class="lodging_MapDiv">
 			
-			<div id="map" style="width: 1090px; height: 1200px; object-fit : cover;"></div>
+			<div id="map11" style="width: 1090px; height: 1200px; object-fit : cover;"></div>
 			
 			<div id="menu_wrap" class="bg_white">
 				<div class="option">
@@ -116,7 +126,7 @@
 			<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=b25d5ee8ce07ea0a73a615ee53a63dbd&libraries=services"></script>
 				
 			<script>
-				var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+				var mapContainer = document.getElementById('map11'), // 지도를 표시할 div 
 			  	mapOption = {
 			       	center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
 			        level: 6 // 지도의 확대 레벨
@@ -495,45 +505,45 @@
 					"<c:url value='/resources/img/Incheon_lodging/Incheon39.jpg'/>",
 					"<c:url value='/resources/img/Incheon_lodging/Incheon40.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon41.jpg",
-					"resources/img/Incheon_lodging/Incheon42.jpg",
-					"resources/img/Incheon_lodging/Incheon43.jpg",
-					"resources/img/Incheon_lodging/Incheon44.jpg",
-					"resources/img/Incheon_lodging/Incheon45.jpg",
-					"resources/img/Incheon_lodging/Incheon46.jpg",
-					"resources/img/Incheon_lodging/Incheon47.jpg",
-					"resources/img/Incheon_lodging/Incheon48.jpg",
-					"resources/img/Incheon_lodging/Incheon49.jpg",
-					"resources/img/Incheon_lodging/Incheon50.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon41.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon42.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon43.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon44.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon45.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon46.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon47.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon48.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon49.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon50.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon51.jpg",
-					"resources/img/Incheon_lodging/Incheon52.jpg",
-					"resources/img/Incheon_lodging/Incheon53.jpg",
-					"resources/img/Incheon_lodging/Incheon54.jpg",
-					"resources/img/Incheon_lodging/Incheon55.jpg",
-					"resources/img/Incheon_lodging/Incheon56.jpg",
-					"resources/img/Incheon_lodging/Incheon57.jpg",
-					"resources/img/Incheon_lodging/Incheon58.jpg",
-					"resources/img/Incheon_lodging/Incheon59.jpg",
-					"resources/img/Incheon_lodging/Incheon60.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon51.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon52.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon53.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon54.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon55.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon56.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon57.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon58.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon59.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon60.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon61.jpg",
-					"resources/img/Incheon_lodging/Incheon62.jpg",
-					"resources/img/Incheon_lodging/Incheon63.jpg",
-					"resources/img/Incheon_lodging/Incheon64.jpg",
-					"resources/img/Incheon_lodging/Incheon65.jpg",
-					"resources/img/Incheon_lodging/Incheon66.jpg",
-					"resources/img/Incheon_lodging/Incheon67.jpg",
-					"resources/img/Incheon_lodging/Incheon68.jpg",
-					"resources/img/Incheon_lodging/Incheon69.jpg",
-					"resources/img/Incheon_lodging/Incheon70.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon61.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon62.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon63.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon64.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon65.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon66.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon67.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon68.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon69.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon70.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon71.jpg",
-					"resources/img/Incheon_lodging/Incheon72.jpg",
-					"resources/img/Incheon_lodging/Incheon73.jpg",
-					"resources/img/Incheon_lodging/Incheon74.jpg",
-					"resources/img/Incheon_lodging/Incheon75.jpg",
-					"resources/img/Incheon_lodging/Incheon76.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon71.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon72.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon73.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon74.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon75.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon76.jpg'/>",
 				];
 				
 				
@@ -614,7 +624,7 @@
 					  /* 오버레이 닫기 버튼 */
 					  var closeBtn_img = document.createElement('img');
 					  closeBtn_img.classList.add('closeBtn_img')
-					  closeBtn_img.src = "resources/img/lodging_img/MapClose.png";
+					  closeBtn_img.src = "<c:url value='/resources/img/lodging_img/MapClose.png'/>"; 
 					  closeBtn_img.onclick = function() { customOverlay.setMap(null); };
 					  info.appendChild(closeBtn_img);
 
@@ -813,89 +823,89 @@
 				
 				/* 오버레이 이미지 */
 				var Map_imgSrc = [
-					"resources/img/Incheon_lodging/Incheon1.jpg",
-					"resources/img/Incheon_lodging/Incheon2.jpg",
-					"resources/img/Incheon_lodging/incheon3.png",
-					"resources/img/Incheon_lodging/Incheon4.jpg",
-					"resources/img/Incheon_lodging/Incheon5.jpg",
-					"resources/img/Incheon_lodging/Incheon6.jpg",
-					"resources/img/Incheon_lodging/Incheon7.jpg",
-					"resources/img/Incheon_lodging/Incheon8.jpg",
-					"resources/img/Incheon_lodging/Incheon9.jpg",
-					"resources/img/Incheon_lodging/Incheon10.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon1.jpg'/>", 
+					"<c:url value='/resources/img/Incheon_lodging/Incheon2.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon3.png'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon4.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon5.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon6.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon7.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon8.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon9.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon10.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon11.jpg",
-					"resources/img/Incheon_lodging/Incheon12.jpg",
-					"resources/img/Incheon_lodging/Incheon13.jpg",
-					"resources/img/Incheon_lodging/Incheon14.jpg",
-					"resources/img/Incheon_lodging/Incheon15.jpg",
-					"resources/img/Incheon_lodging/Incheon16.jpg",
-					"resources/img/Incheon_lodging/Incheon17.jpg",
-					"resources/img/Incheon_lodging/Incheon18.jpg",
-					"resources/img/Incheon_lodging/Incheon19.jpg",
-					"resources/img/Incheon_lodging/Incheon20.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon11.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon12.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon13.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon14.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon15.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon16.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon17.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon18.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon19.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon20.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon21.jpg",
-					"resources/img/Incheon_lodging/Incheon22.jpg",
-					"resources/img/Incheon_lodging/Incheon23.jpg",
-					"resources/img/Incheon_lodging/Incheon24.jpg",
-					"resources/img/Incheon_lodging/Incheon25.jpg",
-					"resources/img/Incheon_lodging/Incheon26.jpg",
-					"resources/img/Incheon_lodging/Incheon27.jpg",
-					"resources/img/Incheon_lodging/Incheon28.jpg",
-					"resources/img/Incheon_lodging/Incheon29.jpg",
-					"resources/img/Incheon_lodging/Incheon30.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon21.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon22.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon23.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon24.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon25.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon26.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon27.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon28.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon29.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon30.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon31.jpg",
-					"resources/img/Incheon_lodging/Incheon32.jpg",
-					"resources/img/Incheon_lodging/Incheon33.jpg",
-					"resources/img/Incheon_lodging/Incheon34.jpg",
-					"resources/img/Incheon_lodging/Incheon35.jpg",
-					"resources/img/Incheon_lodging/Incheon36.jpg",
-					"resources/img/Incheon_lodging/Incheon37.jpg",
-					"resources/img/Incheon_lodging/Incheon38.jpg",
-					"resources/img/Incheon_lodging/Incheon39.jpg",
-					"resources/img/Incheon_lodging/Incheon40.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon31.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon32.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon33.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon34.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon35.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon36.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon37.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon38.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon39.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon40.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon41.jpg",
-					"resources/img/Incheon_lodging/Incheon42.jpg",
-					"resources/img/Incheon_lodging/Incheon43.jpg",
-					"resources/img/Incheon_lodging/Incheon44.jpg",
-					"resources/img/Incheon_lodging/Incheon45.jpg",
-					"resources/img/Incheon_lodging/Incheon46.jpg",
-					"resources/img/Incheon_lodging/Incheon47.jpg",
-					"resources/img/Incheon_lodging/Incheon48.jpg",
-					"resources/img/Incheon_lodging/Incheon49.jpg",
-					"resources/img/Incheon_lodging/Incheon50.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon41.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon42.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon43.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon44.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon45.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon46.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon47.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon48.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon49.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon50.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon51.jpg",
-					"resources/img/Incheon_lodging/Incheon52.jpg",
-					"resources/img/Incheon_lodging/Incheon53.jpg",
-					"resources/img/Incheon_lodging/Incheon54.jpg",
-					"resources/img/Incheon_lodging/Incheon55.jpg",
-					"resources/img/Incheon_lodging/Incheon56.jpg",
-					"resources/img/Incheon_lodging/Incheon57.jpg",
-					"resources/img/Incheon_lodging/Incheon58.jpg",
-					"resources/img/Incheon_lodging/Incheon59.jpg",
-					"resources/img/Incheon_lodging/Incheon60.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon51.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon52.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon53.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon54.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon55.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon56.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon57.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon58.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon59.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon60.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon61.jpg",
-					"resources/img/Incheon_lodging/Incheon62.jpg",
-					"resources/img/Incheon_lodging/Incheon63.jpg",
-					"resources/img/Incheon_lodging/Incheon64.jpg",
-					"resources/img/Incheon_lodging/Incheon65.jpg",
-					"resources/img/Incheon_lodging/Incheon66.jpg",
-					"resources/img/Incheon_lodging/Incheon67.jpg",
-					"resources/img/Incheon_lodging/Incheon68.jpg",
-					"resources/img/Incheon_lodging/Incheon69.jpg",
-					"resources/img/Incheon_lodging/Incheon70.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon61.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon62.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon63.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon64.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon65.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon66.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon67.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon68.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon69.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon70.jpg'/>",
 					
-					"resources/img/Incheon_lodging/Incheon71.jpg",
-					"resources/img/Incheon_lodging/Incheon72.jpg",
-					"resources/img/Incheon_lodging/Incheon73.jpg",
-					"resources/img/Incheon_lodging/Incheon74.jpg",
-					"resources/img/Incheon_lodging/Incheon75.jpg",
-					"resources/img/Incheon_lodging/Incheon76.jpg",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon71.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon72.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon73.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon74.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon75.jpg'/>",
+					"<c:url value='/resources/img/Incheon_lodging/Incheon76.jpg'/>"
 				];
 				
 				
@@ -1011,6 +1021,7 @@
 					  
 					  
 					  
+					  
 					  /* 커스텀 오버레이 띄우기 */
 					  kakao.maps.event.addListener(marker, 'click', function() {
 						  customOverlay.setMap(map);
@@ -1066,6 +1077,7 @@
 												infowindow.close();
 											});
 									  	});
+									  	
 									  	
 									  	
 									  	
@@ -1209,115 +1221,115 @@
 				
 				/* 오버레이 이미지 */
 				var Map_imgSrc = [
-					"resources/img/Gimhae_lodging/Gimhae1.jpg",
-					"resources/img/Gimhae_lodging/Gimhae2.jpg",
-					"resources/img/Gimhae_lodging/Gimhae3.jpg",
-					"resources/img/Gimhae_lodging/Gimhae4.jpg",
-					"resources/img/Gimhae_lodging/Gimhae5.jpg",
-					"resources/img/Gimhae_lodging/Gimhae6.jpg",
-					"resources/img/Gimhae_lodging/Gimhae7.jpg",
-					"resources/img/Gimhae_lodging/Gimhae8.jpg",
-					"resources/img/Gimhae_lodging/Gimhae9.jpg",
-					"resources/img/Gimhae_lodging/Gimhae10.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae1.jpg'/>", 
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae2.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae3.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae4.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae5.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae6.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae7.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae8.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae9.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae10.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae11.jpg",
-					"resources/img/Gimhae_lodging/Gimhae12.jpg",
-					"resources/img/Gimhae_lodging/Gimhae13.jpg",
-					"resources/img/Gimhae_lodging/Gimhae14.jpg",
-					"resources/img/Gimhae_lodging/Gimhae15.jpg",
-					"resources/img/Gimhae_lodging/Gimhae16.jpg",
-					"resources/img/Gimhae_lodging/Gimhae17.jpg",
-					"resources/img/Gimhae_lodging/Gimhae18.jpg",
-					"resources/img/Gimhae_lodging/Gimhae19.jpg",
-					"resources/img/Gimhae_lodging/Gimhae20.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae11.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae12.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae13.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae14.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae15.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae16.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae17.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae18.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae19.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae20.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae21.jpg",
-					"resources/img/Gimhae_lodging/Gimhae22.jpg",
-					"resources/img/Gimhae_lodging/Gimhae23.jpg",
-					"resources/img/Gimhae_lodging/Gimhae24.jpg",
-					"resources/img/Gimhae_lodging/Gimhae25.jpg",
-					"resources/img/Gimhae_lodging/Gimhae26.jpg",
-					"resources/img/Gimhae_lodging/Gimhae27.jpg",
-					"resources/img/Gimhae_lodging/Gimhae28.jpg",
-					"resources/img/Gimhae_lodging/Gimhae29.jpg",
-					"resources/img/Gimhae_lodging/Gimhae30.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae21.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae22.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae23.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae24.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae25.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae26.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae27.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae28.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae29.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae30.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae31.jpg",
-					"resources/img/Gimhae_lodging/Gimhae32.jpg",
-					"resources/img/Gimhae_lodging/Gimhae33.jpg",
-					"resources/img/Gimhae_lodging/Gimhae34.jpg",
-					"resources/img/Gimhae_lodging/Gimhae35.jpg",
-					"resources/img/Gimhae_lodging/Gimhae36.jpg",
-					"resources/img/Gimhae_lodging/Gimhae37.jpg",
-					"resources/img/Gimhae_lodging/Gimhae38.jpg",
-					"resources/img/Gimhae_lodging/Gimhae39.jpg",
-					"resources/img/Gimhae_lodging/Gimhae40.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae31.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae32.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae33.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae34.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae35.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae36.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae37.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae38.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae39.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae40.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae41.jpg",
-					"resources/img/Gimhae_lodging/Gimhae42.jpg",
-					"resources/img/Gimhae_lodging/Gimhae43.jpg",
-					"resources/img/Gimhae_lodging/Gimhae44.jpg",
-					"resources/img/Gimhae_lodging/Gimhae45.jpg",
-					"resources/img/Gimhae_lodging/Gimhae46.jpg",
-					"resources/img/Gimhae_lodging/Gimhae47.jpg",
-					"resources/img/Gimhae_lodging/Gimhae48.jpg",
-					"resources/img/Gimhae_lodging/Gimhae49.jpg",
-					"resources/img/Gimhae_lodging/Gimhae50.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae41.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae42.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae43.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae44.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae45.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae46.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae47.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae48.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae49.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae50.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae51.jpg",
-					"resources/img/Gimhae_lodging/Gimhae52.jpg",
-					"resources/img/Gimhae_lodging/Gimhae53.jpg",
-					"resources/img/Gimhae_lodging/Gimhae54.jpg",
-					"resources/img/Gimhae_lodging/Gimhae55.jpg",
-					"resources/img/Gimhae_lodging/Gimhae56.jpg",
-					"resources/img/Gimhae_lodging/Gimhae57.jpg",
-					"resources/img/Gimhae_lodging/Gimhae58.jpg",
-					"resources/img/Gimhae_lodging/Gimhae59.jpg",
-					"resources/img/Gimhae_lodging/Gimhae60.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae51.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae52.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae53.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae54.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae55.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae56.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae57.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae58.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae59.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae60.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae61.jpg",
-					"resources/img/Gimhae_lodging/Gimhae62.jpg",
-					"resources/img/Gimhae_lodging/Gimhae63.jpg",
-					"resources/img/Gimhae_lodging/Gimhae64.jpg",
-					"resources/img/Gimhae_lodging/Gimhae65.jpg",
-					"resources/img/Gimhae_lodging/Gimhae66.jpg",
-					"resources/img/Gimhae_lodging/Gimhae67.jpg",
-					"resources/img/Gimhae_lodging/Gimhae68.jpg",
-					"resources/img/Gimhae_lodging/Gimhae69.jpg",
-					"resources/img/Gimhae_lodging/Gimhae70.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae61.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae62.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae63.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae64.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae65.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae66.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae67.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae68.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae69jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae70.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae71.jpg",
-					"resources/img/Gimhae_lodging/Gimhae72.jpg",
-					"resources/img/Gimhae_lodging/Gimhae73.jpg",
-					"resources/img/Gimhae_lodging/Gimhae74.jpg",
-					"resources/img/Gimhae_lodging/Gimhae75.jpg",
-					"resources/img/Gimhae_lodging/Gimhae76.jpg",
-					"resources/img/Gimhae_lodging/Gimhae77.jpg",
-					"resources/img/Gimhae_lodging/Gimhae78.jpg",
-					"resources/img/Gimhae_lodging/Gimhae79.jpg",
-					"resources/img/Gimhae_lodging/Gimhae80.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae71.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae72.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae73.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae74.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae75.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae76.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae77.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae78.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae79.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae80.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae81.jpg",
-					"resources/img/Gimhae_lodging/Gimhae82.jpg",
-					"resources/img/Gimhae_lodging/Gimhae83.jpg",
-					"resources/img/Gimhae_lodging/Gimhae84.jpg",
-					"resources/img/Gimhae_lodging/Gimhae85.jpg",
-					"resources/img/Gimhae_lodging/Gimhae86.jpg",
-					"resources/img/Gimhae_lodging/Gimhae87.jpg",
-					"resources/img/Gimhae_lodging/Gimhae88.jpg",
-					"resources/img/Gimhae_lodging/Gimhae89.jpg",
-					"resources/img/Gimhae_lodging/Gimhae90.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae81.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae82.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae83.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae84.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae85.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae86.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae87.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae88.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae89.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae90.jpg'/>",
 					
-					"resources/img/Gimhae_lodging/Gimhae91.jpg",
-					"resources/img/Gimhae_lodging/Gimhae92.jpg",
-					"resources/img/Gimhae_lodging/Gimhae93.jpg",
-					"resources/img/Gimhae_lodging/Gimhae94.jpg",
-					"resources/img/Gimhae_lodging/Gimhae95.jpg",
-					"resources/img/Gimhae_lodging/Gimhae96.jpg",
-					"resources/img/Gimhae_lodging/Gimhae97.jpg",
-					"resources/img/Gimhae_lodging/Gimhae98.jpg",
-					"resources/img/Gimhae_lodging/Gimhae99.jpg",
-					"resources/img/Gimhae_lodging/Gimhae100.jpg",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae91.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae92.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae93.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae94.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae95.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae96.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae97.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae98.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae99.jpg'/>",
+					"<c:url value='/resources/img/Gimhae_lodging/Gimhae100.jpg'/>",
 					
 				];
 				
@@ -1398,7 +1410,7 @@
 					  /* 오버레이 닫기 버튼 */
 					  var closeBtn_img = document.createElement('img');
 					  closeBtn_img.classList.add('closeBtn_img')
-					  closeBtn_img.src = "resources/img/lodging_img/MapClose.png";
+					  closeBtn_img.src = "<c:url value='/resources/img/lodging_img/MapClose.png'/>";
 					  closeBtn_img.onclick = function() { customOverlay.setMap(null); };
 					  info.appendChild(closeBtn_img);
 
@@ -1429,6 +1441,7 @@
 								marker.setMap(null)
 							});
 					  });
+					  
 					  
 					  
 					  
@@ -1485,7 +1498,7 @@
 												infowindow.close(); 
 											});
 									  	});
-									  	
+									  	;
 
 										// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
 										map.setCenter(coords);
@@ -1599,91 +1612,91 @@
 				/* 오버레이 이미지 */
 				var Map_imgSrc = [
 					
-					"resources/img/Gimpo_lodging/Gimpo1.jpg",
-					"resources/img/Gimpo_lodging/Gimpo2.jpg",
-					"resources/img/Gimpo_lodging/Gimpo3.jpg",
-					"resources/img/Gimpo_lodging/Gimpo4.jpg",
-					"resources/img/Gimpo_lodging/Gimpo5.jpg",
-					"resources/img/Gimpo_lodging/Gimpo6.jpg",
-					"resources/img/Gimpo_lodging/Gimpo7.jpg",
-					"resources/img/Gimpo_lodging/Gimpo8.jpg",
-					"resources/img/Gimpo_lodging/Gimpo9.jpg",
-					"resources/img/Gimpo_lodging/Gimpo10.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo1.jpg'/>", 
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo2.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo3.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo4.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo5.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo6.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo7.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo8.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo9.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo10.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo11.jpg",
-					"resources/img/Gimpo_lodging/Gimpo12.jpg",
-					"resources/img/Gimpo_lodging/Gimpo13.jpg",
-					"resources/img/Gimpo_lodging/Gimpo14.jpg",
-					"resources/img/Gimpo_lodging/Gimpo15.jpg",
-					"resources/img/Gimpo_lodging/Gimpo16.jpg",
-					"resources/img/Gimpo_lodging/Gimpo17.jpg",
-					"resources/img/Gimpo_lodging/Gimpo18.jpg",
-					"resources/img/Gimpo_lodging/Gimpo19.jpg",
-					"resources/img/Gimpo_lodging/Gimpo20.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo11.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo12.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo13.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo14.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo15.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo16.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo17.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo18.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo19.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo20.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo21.jpg",
-					"resources/img/Gimpo_lodging/Gimpo22.jpg",
-					"resources/img/Gimpo_lodging/Gimpo23.jpg",
-					"resources/img/Gimpo_lodging/Gimpo24.jpg",
-					"resources/img/Gimpo_lodging/Gimpo25.jpg",
-					"resources/img/Gimpo_lodging/Gimpo26.jpg",
-					"resources/img/Gimpo_lodging/Gimpo27.jpg",
-					"resources/img/Gimpo_lodging/Gimpo28.jpg",
-					"resources/img/Gimpo_lodging/Gimpo29.jpg",
-					"resources/img/Gimpo_lodging/Gimpo30.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo21.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo22.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo23.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo24.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo25.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo26.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo27.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo28.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo29.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo30.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo31.jpg",
-					"resources/img/Gimpo_lodging/Gimpo32.jpg",
-					"resources/img/Gimpo_lodging/Gimpo33.jpg",
-					"resources/img/Gimpo_lodging/Gimpo34.jpg",
-					"resources/img/Gimpo_lodging/Gimpo35.jpg",
-					"resources/img/Gimpo_lodging/Gimpo36.jpg",
-					"resources/img/Gimpo_lodging/Gimpo37.jpg",
-					"resources/img/Gimpo_lodging/Gimpo38.jpg",
-					"resources/img/Gimpo_lodging/Gimpo39.jpg",
-					"resources/img/Gimpo_lodging/Gimpo40.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo31.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo32.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo33.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo34.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo35.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo36.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo37.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo38.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo39.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo40.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo41.jpg",
-					"resources/img/Gimpo_lodging/Gimpo42.jpg",
-					"resources/img/Gimpo_lodging/Gimpo43.jpg",
-					"resources/img/Gimpo_lodging/Gimpo44.jpg",
-					"resources/img/Gimpo_lodging/Gimpo45.jpg",
-					"resources/img/Gimpo_lodging/Gimpo46.jpg",
-					"resources/img/Gimpo_lodging/Gimpo47.jpg",
-					"resources/img/Gimpo_lodging/Gimpo48.jpg",
-					"resources/img/Gimpo_lodging/Gimpo49.jpg",
-					"resources/img/Gimpo_lodging/Gimpo50.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo41.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo42.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo43.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo44.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo45.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo46.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo47.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo48.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo49.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo50.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo51.jpg",
-					"resources/img/Gimpo_lodging/Gimpo52.jpg",
-					"resources/img/Gimpo_lodging/Gimpo53.jpg",
-					"resources/img/Gimpo_lodging/Gimpo54.jpg",
-					"resources/img/Gimpo_lodging/Gimpo55.jpg",
-					"resources/img/Gimpo_lodging/Gimpo56.jpg",
-					"resources/img/Gimpo_lodging/Gimpo57.jpg",
-					"resources/img/Gimpo_lodging/Gimpo58.jpg",
-					"resources/img/Gimpo_lodging/Gimpo59.jpg",
-					"resources/img/Gimpo_lodging/Gimpo60.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo51.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo52.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo53.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo54.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo55.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo56.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo57.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo58.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo59.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo60.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo61.jpg",
-					"resources/img/Gimpo_lodging/Gimpo62.jpg",
-					"resources/img/Gimpo_lodging/Gimpo63.jpg",
-					"resources/img/Gimpo_lodging/Gimpo64.jpg",
-					"resources/img/Gimpo_lodging/Gimpo65.jpg",
-					"resources/img/Gimpo_lodging/Gimpo66.jpg",
-					"resources/img/Gimpo_lodging/Gimpo67.jpg",
-					"resources/img/Gimpo_lodging/Gimpo68.jpg",
-					"resources/img/Gimpo_lodging/Gimpo69.jpg",
-					"resources/img/Gimpo_lodging/Gimpo70.jpg",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo61.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo62.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo63.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo64.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo65.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo66.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo67.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo68.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo69.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo70.jpg'/>",
 					
-					"resources/img/Gimpo_lodging/Gimpo71.jpg",
-					"resources/img/Gimpo_lodging/Gimpo72.jpg",
-					"resources/img/Gimpo_lodging/Gimpo73.jpg",
-					"resources/img/Gimpo_lodging/Gimpo74.jpg",
-					"resources/img/Gimpo_lodging/Gimpo75.jpg",
-					"resources/img/Gimpo_lodging/Gimpo76.jpg",
-					"resources/img/Gimpo_lodging/Gimpo77.jpg",
-					"resources/img/Gimpo_lodging/Gimpo78.jpg"
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo71.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo72.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo73.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo74.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo75.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo76.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo77.jpg'/>",
+					"<c:url value='/resources/img/Gimpo_lodging/Gimpo78.jpg'/>",
 					
 				];
 				
@@ -1764,7 +1777,7 @@
 					  /* 오버레이 닫기 버튼 */
 					  var closeBtn_img = document.createElement('img');
 					  closeBtn_img.classList.add('closeBtn_img')
-					  closeBtn_img.src = "resources/img/lodging_img/MapClose.png";
+					  closeBtn_img.src = "<c:url value='/resources/img/lodging_img/MapClose.png'/>";
 					  closeBtn_img.onclick = function() { customOverlay.setMap(null); };
 					  info.appendChild(closeBtn_img);
 
@@ -1851,6 +1864,7 @@
 												infowindow.close();
 											});
 									  	});
+									  	
 									  	
 									  	
 
@@ -2022,147 +2036,146 @@
 				/* 오버레이 이미지 */
 				var Map_imgSrc = [
 					
-					"resources/img/jeju_lodging/jeju1.jpg",
-					"resources/img/jeju_lodging/jeju2.jpg",
-					"resources/img/jeju_lodging/jeju3.jpg",
-					"resources/img/jeju_lodging/jeju4.jpg",
-					"resources/img/jeju_lodging/jeju5.jpg",
-					"resources/img/jeju_lodging/jeju6.jpg",
-					"resources/img/jeju_lodging/jeju7.jpg",
-					"resources/img/jeju_lodging/jeju8.jpg",
-					"resources/img/jeju_lodging/jeju9.jpg",
-					"resources/img/jeju_lodging/jeju10.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju1.jpg'/>", 
+					"<c:url value='/resources/img/jeju_lodging/jeju2.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju3.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju4.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju5.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju6.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju7.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju8.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju9.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju10.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju11.jpg",
-					"resources/img/jeju_lodging/jeju12.jpg",
-					"resources/img/jeju_lodging/jeju13.jpg",
-					"resources/img/jeju_lodging/jeju14.jpg",
-					"resources/img/jeju_lodging/jeju15.jpg",
-					"resources/img/jeju_lodging/jeju16.jpg",
-					"resources/img/jeju_lodging/jeju17.jpg",
-					"resources/img/jeju_lodging/jeju18.jpg",
-					"resources/img/jeju_lodging/jeju19.jpg",
-					"resources/img/jeju_lodging/jeju20.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju11.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju12.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju13.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju14.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju15.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju16.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju17.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju18.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju19.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju20.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju21.jpg",
-					"resources/img/jeju_lodging/jeju22.jpg",
-					"resources/img/jeju_lodging/jeju23.jpg",
-					"resources/img/jeju_lodging/jeju24.jpg",
-					"resources/img/jeju_lodging/jeju25.jpg",
-					"resources/img/jeju_lodging/jeju26.jpg",
-					"resources/img/jeju_lodging/jeju27.jpg",
-					"resources/img/jeju_lodging/jeju28.jpg",
-					"resources/img/jeju_lodging/jeju29.jpg",
-					"resources/img/jeju_lodging/jeju30.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju21.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju22.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju23.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju24.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju25.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju26.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju27.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju28.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju29.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju30.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju31.jpg",
-					"resources/img/jeju_lodging/jeju32.jpg",
-					"resources/img/jeju_lodging/jeju33.jpg",
-					"resources/img/jeju_lodging/jeju34.jpg",
-					"resources/img/jeju_lodging/jeju35.jpg",
-					"resources/img/jeju_lodging/jeju36.jpg",
-					"resources/img/jeju_lodging/jeju37.jpg",
-					"resources/img/jeju_lodging/jeju38.jpg",
-					"resources/img/jeju_lodging/jeju39.jpg",
-					"resources/img/jeju_lodging/jeju40.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju31.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju32.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju33.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju34.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju35.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju36.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju37.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju38.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju39.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju40.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju41.jpg",
-					"resources/img/jeju_lodging/jeju42.jpg",
-					"resources/img/jeju_lodging/jeju43.jpg",
-					"resources/img/jeju_lodging/jeju44.jpg",
-					"resources/img/jeju_lodging/jeju45.jpg",
-					"resources/img/jeju_lodging/jeju46.jpg",
-					"resources/img/jeju_lodging/jeju47.jpg",
-					"resources/img/jeju_lodging/jeju48.jpg",
-					"resources/img/jeju_lodging/jeju49.jpg",
-					"resources/img/jeju_lodging/jeju50.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju41.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju42.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju43.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju44.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju45.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju46.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju47.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju48.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju49.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju50.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju51.jpg",
-					"resources/img/jeju_lodging/jeju52.jpg",
-					"resources/img/jeju_lodging/jeju53.jpg",
-					"resources/img/jeju_lodging/jeju54.jpg",
-					"resources/img/jeju_lodging/jeju55.jpg",
-					"resources/img/jeju_lodging/jeju56.jpg",
-					"resources/img/jeju_lodging/jeju57.jpg",
-					"resources/img/jeju_lodging/jeju58.jpg",
-					"resources/img/jeju_lodging/jeju59.jpg",
-					"resources/img/jeju_lodging/jeju60.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju51.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju52.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju53.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju54.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju55.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju56.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju57.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju58.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju59.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju60.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju61.jpg",
-					"resources/img/jeju_lodging/jeju62.jpg",
-					"resources/img/jeju_lodging/jeju63.jpg",
-					"resources/img/jeju_lodging/jeju64.jpg",
-					"resources/img/jeju_lodging/jeju65.jpg",
-					"resources/img/jeju_lodging/jeju66.jpg",
-					"resources/img/jeju_lodging/jeju67.jpg",
-					"resources/img/jeju_lodging/jeju68.jpg",
-					"resources/img/jeju_lodging/jeju69.jpg",
-					"resources/img/jeju_lodging/jeju70.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju61.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju62.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju63.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju64.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju65.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju66.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju67.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju68.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju69.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju70.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju71.jpg",
-					"resources/img/jeju_lodging/jeju72.jpg",
-					"resources/img/jeju_lodging/jeju73.jpg",
-					"resources/img/jeju_lodging/jeju74.jpg",
-					"resources/img/jeju_lodging/jeju75.jpg",
-					"resources/img/jeju_lodging/jeju76.jpg",
-					"resources/img/jeju_lodging/jeju77.jpg",
-					"resources/img/jeju_lodging/jeju78.jpg",
-					"resources/img/jeju_lodging/jeju79.jpg",
-					"resources/img/jeju_lodging/jeju80.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju71.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju72.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju73.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju74.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju75.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju76.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju77.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju78.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju79.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju80.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju81.jpg",
-					"resources/img/jeju_lodging/jeju82.jpg",
-					"resources/img/jeju_lodging/jeju83.jpg",
-					"resources/img/jeju_lodging/jeju84.jpg",
-					"resources/img/jeju_lodging/jeju85.jpg",
-					"resources/img/jeju_lodging/jeju86.jpg",
-					"resources/img/jeju_lodging/jeju87.jpg",
-					"resources/img/jeju_lodging/jeju88.jpg",
-					"resources/img/jeju_lodging/jeju89.jpg",
-					"resources/img/jeju_lodging/jeju90.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju81.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju82.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju83.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju84.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju85.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju86.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju87.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju88.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju89.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju90.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju91.jpg",
-					"resources/img/jeju_lodging/jeju92.jpg",
-					"resources/img/jeju_lodging/jeju93.jpg",
-					"resources/img/jeju_lodging/jeju94.jpg",
-					"resources/img/jeju_lodging/jeju95.jpg",
-					"resources/img/jeju_lodging/jeju96.jpg",
-					"resources/img/jeju_lodging/jeju97.jpg",
-					"resources/img/jeju_lodging/jeju98.jpg",
-					"resources/img/jeju_lodging/jeju99.jpg",
-					"resources/img/jeju_lodging/jeju100.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju91.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju92.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju93.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju94.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju95.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju96.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju97.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju98.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju99.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju100.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju101.jpg",
-					"resources/img/jeju_lodging/jeju102.jpg",
-					"resources/img/jeju_lodging/jeju103.jpg",
-					"resources/img/jeju_lodging/jeju104.jpg",
-					"resources/img/jeju_lodging/jeju105.jpg",
-					"resources/img/jeju_lodging/jeju106.jpg",
-					"resources/img/jeju_lodging/jeju107.jpg",
-					"resources/img/jeju_lodging/jeju108.jpg",
-					"resources/img/jeju_lodging/jeju109.jpg",
-					"resources/img/jeju_lodging/jeju110.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju101.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju102.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju103.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju104.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju105.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju106.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju107.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju108.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju109.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju110.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju111.jpg",
-					"resources/img/jeju_lodging/jeju112.jpg",
-					"resources/img/jeju_lodging/jeju113.jpg",
-					"resources/img/jeju_lodging/jeju114.jpg",
-					"resources/img/jeju_lodging/jeju115.jpg",
-					"resources/img/jeju_lodging/jeju116.jpg",
-					"resources/img/jeju_lodging/jeju117.jpg",
-					"resources/img/jeju_lodging/jeju118.jpg",
-					"resources/img/jeju_lodging/jeju119.jpg",
-					"resources/img/jeju_lodging/jeju120.jpg",
+					"<c:url value='/resources/img/jeju_lodging/jeju111.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju112.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju113.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju114.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju115.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju116.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju117.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju118.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju119.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju120.jpg'/>",
 					
-					"resources/img/jeju_lodging/jeju121.jpg",
-					"resources/img/jeju_lodging/jeju122.jpg",
-					"resources/img/jeju_lodging/jeju123.jpg",
-					"resources/img/jeju_lodging/jeju124.jpg",
-					"resources/img/jeju_lodging/jeju125.jpg",
-					"resources/img/jeju_lodging/jeju126.jpg",
-					"resources/img/jeju_lodging/jeju127.jpg",
-					"resources/img/jeju_lodging/jeju128.jpg",
-					
+					"<c:url value='/resources/img/jeju_lodging/jeju121.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju122.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju123.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju124.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju125.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju126.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju127.jpg'/>",
+					"<c:url value='/resources/img/jeju_lodging/jeju128.jpg'/>",
 				];
 				
 				
@@ -2240,7 +2253,7 @@
 					  /* 오버레이 닫기 버튼 */
 					  var closeBtn_img = document.createElement('img');
 					  closeBtn_img.classList.add('closeBtn_img')
-					  closeBtn_img.src = "resources/img/lodging_img/MapClose.png";
+					  closeBtn_img.src = "<c:url value='/resources/img/lodging_img/MapClose.png'/>";
 					  closeBtn_img.onclick = function() { customOverlay.setMap(null); };
 					  info.appendChild(closeBtn_img);
 
@@ -2330,6 +2343,7 @@
 									  	
 									  	
 									  	
+									  	
 
 										// 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
 										map.setCenter(coords);
@@ -2339,12 +2353,14 @@
 				});
 			    
 			    
+			
+			    
 			    
 			    
 			</script>
 			
 		</div>
-		
+		<div></div>
 		<div style=" height: 130px; ">
 		</div>
 		

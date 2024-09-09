@@ -19,40 +19,83 @@
 
 <div style="text-align: center; width : 1500px; margin : 0px auto;">
 	<!-- 여행추천 스와이퍼 -->
-	<div style="margin-top: 40px; position: relative; z-index: 0;">
+	<div style="margin-top: 40px; width: 1103px; left: 187px; position: relative; z-index: 0;">
 		 <div class="swiper mySwiper" style="padding-top: 35px; padding-bottom: 35px;">
     		<div class="swiper-wrapper">
     			
     			
-      			<div class="swiper-slide" style="width: 485px;">
+      			<div class="swiper-slide" style="width: 350px;">
       				<a href="https://www.tripadvisor.co.kr/Tourism-g293916-Bangkok-Vacations.html">
       					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper1.png'/>">
       				</a>
       			</div>
       			
-      			<div class="swiper-slide" style="width: 485px;">
+      			<div class="swiper-slide" style="width: 350px;">
       				<a href="https://www.tripadvisor.co.kr/Tourism-g294261-Cebu_Island_Visayas-Vacations.html">
       					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper2.png'/>">
       				</a>
       			</div>
       			
-      			<div class="swiper-slide" style="width: 485px;">
+      			<div class="swiper-slide" style="width: 350px;">
       				<a href="https://www.tripadvisor.co.kr/Tourism-g298307-Kota_Kinabalu_Kota_Kinabalu_District_West_Coast_Division_Sabah-Vacations.html">
       					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper3.png'/>">
       				</a>
       			</div>
       			
-      			<div class="swiper-slide" style="width: 485px;">
+      			<div class="swiper-slide" style="width: 350px;">
       				<a href="https://www.tripadvisor.co.kr/Tourism-g60668-Guam-Vacations.html">
       					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper4.png'/>">
       				</a>
       			</div>
       			
-      			<div class="swiper-slide" style="width: 485px;">
+      			<div class="swiper-slide" style="width: 350px;">
       				<a href="https://www.tripadvisor.co.kr/Tourism-g1673720-Bohol_Province_Visayas-Vacations.html">
       					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper5.png'/>">
       				</a>
       			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g469418-Phu_Quoc_Island_Kien_Giang_Province-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper6.png'/>">
+      				</a>
+      			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g311304-Sapa_Lao_Cai_Province-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper7.png'/>">
+      				</a>
+      			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g293922-Da_Lat_Lam_Dong_Province-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper8.png'/>">
+      				</a>
+      			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g293925-Ho_Chi_Minh_City-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper9.png'/>">
+      				</a>
+      			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g1009804-Mui_Ne_Phan_Thiet_Binh_Thuan_Province-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper10.png'/>">
+      				</a>
+      			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g298085-Da_Nang-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper11.png'/>">
+      				</a>
+      			</div>
+      			
+      			<div class="swiper-slide" style="width: 350px; height: 178px;">
+      				<a href="https://www.tripadvisor.co.kr/Tourism-g293924-Hanoi-Vacations.html">
+      					<img class="swiper_IMG" src="<c:url value='/resources/img/SwiperImg/Swiper12.png'/>">
+      				</a>
+      			</div>
+      			
       			
     		</div>
     		<div class="swiper-button-next" id="B_travel_nextBtn">
@@ -88,11 +131,11 @@
 				</div>
 				
 				<div class="swiper-slide">
-					<img src="<c:url value='/resources/img/ad/ad5.jpg'/>" class="Event_img" />
+					<img src="<c:url value='/resources/img/ad/ad5.png'/>" class="Event_img" />
 				</div>
 				
 				<div class="swiper-slide">
-					<img src="<c:url value='/resources/img/ad/ad6.jpg'/>" class="Event_img" />
+					<img src="<c:url value='/resources/img/ad/ad6.png'/>" class="Event_img" />
 				</div>
 				
 			</div>
@@ -254,7 +297,7 @@
 
 
 <!-- 장거리 여행추천 -->
-	<div style="margin-top: 150px;">
+	<div style="margin-top: 50px;">
 		<div class="long_distance_travel_title">
 			장거리 여행추천
 		</div>
@@ -265,7 +308,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g32655-Los_Angeles_California-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img1.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img1.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">로스앤젤레스</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">로스앤젤레스</p>
@@ -278,7 +321,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g186338-London_England-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img2.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img2.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">런던</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">런던</p>
@@ -291,7 +334,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g60713-San_Francisco_California-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img3.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img3.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">샌프란시스코</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">샌프란시스코</p>
@@ -304,7 +347,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g60763-New_York_City_New_York-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img4.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img4.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">뉴욕</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">뉴욕</p>
@@ -316,7 +359,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g187147-Paris_Ile_de_France-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img5.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img5.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">파리</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">파리</p>
@@ -328,7 +371,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g187497-Barcelona_Catalonia-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img6.png'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img6.png'/>" style="width: 200px;">
 						<div class="long_travel_text">바르셀로나</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">바르셀로나</p>
@@ -340,7 +383,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g187791-Rome_Lazio-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img7.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img7.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">로마</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">로마</p>
@@ -352,7 +395,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g28932-Hawaii-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img8.png'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img8.png'/>" style="width: 200px;">
 						<div class="long_travel_text">하와이</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">하와이</p>
@@ -364,7 +407,7 @@
 				
 				<div class="swiper-slide" id="long_distance_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g188045-Switzerland-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img9.jpg'/>" style="height: 250px;">
+						<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_img9.jpg'/>" style="height: 200px;">
 						<div class="long_travel_text">스위스</div>
 						<div class="long_distance_Shortcut">
 							<p class="long_distance_travel_p">스위스</p>
@@ -378,14 +421,14 @@
 		</div>
 		
 		<div class="long_distance_travel_line">
-				<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_icon.png'/>" style="position: relative; height: 245px; right: 400px; bottom: 210px;">
+				<img src="<c:url value='/resources/img/long_distance_travel/long_distance_travel_icon.png'/>" style="position: relative; height: 180px; right: 400px; bottom: 143px;">
 		</div>
 
 	</div>
 	
 	
 <!-- 근거리 여행 추천 -->
-<div style="margin-top: 80px;">
+<div style="margin-top: 20px;">
 	
 	<div class="short_distance_travel_title">
 		근거리 여행추천
@@ -396,7 +439,7 @@
 		
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g298207-Fukuoka_Fukuoka_Prefecture_Kyushu-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img1.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img1.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">후쿠오카</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">후쿠오카</p>
@@ -407,7 +450,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g293916-Bangkok-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img2.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img2.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">방콕</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">방콕</p>
@@ -418,7 +461,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g293924-Hanoi-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img3.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img3.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">하노이</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">하노이</p>
@@ -429,7 +472,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g298560-Sapporo_Hokkaido-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img4.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img4.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">삿포로</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">삿포로</p>
@@ -440,7 +483,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g298566-Osaka_Osaka_Prefecture_Kinki-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img5.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img5.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">오사카</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">오사카</p>
@@ -451,7 +494,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g293917-Chiang_Mai-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img6.jpg'/>" style="height: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img6.jpg'/>" style="height: 200px;">
 					<div class="long_travel_text">치앙마이</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">치앙마이</p>
@@ -462,7 +505,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g294212-Beijing-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img7.jpg'/>" style="height: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img7.jpg'/>" style="height: 200px;">
 					<div class="long_travel_text">베이징</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">베이징</p>
@@ -473,7 +516,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g298085-Da_Nang-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img8.jpg'/>" style="height: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img8.jpg'/>" style="height: 200px;">
 					<div class="long_travel_text">다낭</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">다낭</p>
@@ -484,7 +527,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g294265-Singapore-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img9.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img9.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">싱가포르</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">싱가포르</p>
@@ -495,7 +538,7 @@
 			
 			<div class="swiper-slide" id="short_distance_travel_div">
 				<a href="https://www.tripadvisor.co.kr/Tourism-g298184-Tokyo_Tokyo_Prefecture_Kanto-Vacations.html" style="text-decoration: none;">
-					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img10.jpg'/>" style="width: 250px;">
+					<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_img10.jpg'/>" style="width: 200px;">
 					<div class="long_travel_text">도쿄</div>
 					<div class="short_distance_Shortcut">
 							<p class="long_distance_travel_p">도쿄</p>
@@ -507,14 +550,14 @@
 		</div>
 	</div>
 	<div class="short_distance_travel_line">
-		<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_icon.png'/>" style="position: relative; height: 250px; left: 400px; bottom: 163px;">
+		<img src="<c:url value='/resources/img/short_distance_travel/short_distance_travel_icon.png'/>" style="position: relative; height: 205px; left: 400px; bottom: 130px;">
 	</div>
 	
 </div>
 
 
 
-<div style="margin-top: 150px;">
+<div style="margin-top: 2	0px;">
 		<div class="domestic_travel_title">
 			국내 여행추천
 		</div>
@@ -524,7 +567,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g294197-Seoul-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img1.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img1.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">서울</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">서울</p>
@@ -535,7 +578,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g297884-Busan-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img2.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img2.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">부산</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">부산</p>
@@ -546,7 +589,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g297889-Incheon-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img3.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img3.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">인천</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">인천</p>
@@ -557,7 +600,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g983296-Jeju_Island-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img4.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img4.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">제주</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">제주</p>
@@ -568,7 +611,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Tourism-g1143545-Jeonju_Jeollabuk_do-Vacations.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img5.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img5.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">전주</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">전주</p>
@@ -579,7 +622,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Attraction_Review-g2024858-d2092656-Reviews-Ulleungdo-Ulleung_gun_Gyeongsangbuk_do.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img6.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img6.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">울릉도</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">울릉도</p>
@@ -590,7 +633,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Attraction_Review-g2024858-d2092656-Reviews-Ulleungdo-Ulleung_gun_Gyeongsangbuk_do.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img7.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img7.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">여수</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">여수</p>
@@ -601,7 +644,7 @@
 				
 				<div class="swiper-slide" id="domestic_travel_div">
 					<a href="https://www.tripadvisor.co.kr/Attraction_Review-g2024858-d2092656-Reviews-Ulleungdo-Ulleung_gun_Gyeongsangbuk_do.html" style="text-decoration: none;">
-						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img8.jpg'/>" style="width: 250px;">
+						<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_img8.jpg'/>" style="width: 200px;">
 						<div class="long_travel_text">경주</div>
 						<div class="domestic_travel_Shortcut">
 							<p class="long_distance_travel_p">경주</p>
@@ -615,7 +658,7 @@
 		</div>
 		
 		<div class="domestic_travel_line"> 
-				<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_icon.png'/>" style="position: relative; height: 275px; right: 400px; bottom: 173px;">
+				<img src="<c:url value='/resources/img/domestic_travel/domestic_travel_icon.png'/>" style="position: relative; height: 225px; right: 400px; bottom: 135px;">
 		</div>
 
 	</div>
@@ -1765,9 +1808,9 @@
     effect: "coverflow",
     loop: true,
     coverflowEffect: {
-        rotate: 50,
+        rotate: 30,
         stretch: 0,
-        depth: 100,
+        depth: 300,
         modifier: 1,
         slideShadows: true,
       },

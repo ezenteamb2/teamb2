@@ -260,8 +260,9 @@
 .title_img_div{
 	display: inline-block;
 	position: absolute;
-    top: 90px;
-    padding-left: 27px;
+    top: 96px;
+    padding-left: 30px;
+    z-index: -1;
 }
 
 .title_img_div2_1{
@@ -280,19 +281,19 @@
 	position: absolute;
 	display: inline-block;
 	top: 45px;
-	padding-left: 48px;
 }
 .title_img_div2_4{
 	position: absolute;
 	display: inline-block;
 	top: 30px;
-	padding-left: 93px;
+	padding-left: 21px;
 }
 .title_img_div2_5{
 	position: absolute;
 	display: inline-block;
 	top: 45px;
-	padding-left: 137px;
+	padding-left: 65px;
+	z-index: -1;
 }
 
 
@@ -304,6 +305,8 @@
 	width : 50px;
 	display : none;
 	animation: scale-in-center 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	position: relative;
+    right: 70px;
 }
 
 /* 열차 */
@@ -312,6 +315,8 @@
 	width : 50px;
 	display : none;
 	animation: scale-in-center2 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	position: relative;
+    right: 70px;
 }
 
 /* 비행기 */
@@ -320,6 +325,8 @@
 	width : 50px;
 	display : none;
 	animation: scale-in-center3 12s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	position: relative;
+    right: 70px;
 }
 
 /* 드럼 */
@@ -356,6 +363,9 @@
 
 
 							/* -------------------------------- 로그인 회원가입 --------------------------------  */
+.modal-body{
+	box-sizing: border-box !important;
+}
 							
 .header_login{
 	color:black;
@@ -377,8 +387,132 @@
 }
 .transportation_tag:hover {
 	  animation: jello-horizontal 0.9s both;
-	  
+	  cursor: pointer;	
 }
+
+/* 운항스케줄 태그 */
+.Flight_schedule_Tag{
+	font-family: 'TheJamsil5Bold';
+    position: relative;
+    bottom: 20px;
+    filter: opacity(0);
+    transition-duration: 0.5s;
+    background: black;
+    width: 175px;
+    height: 45px;
+    border-radius: 30px;
+    left: 57px;
+    overflow: hidden;
+}
+.Flight_schedule_Tag:hover{
+	cursor: pointer;
+    box-shadow: 0px 0px 5px 0px #ffc120;
+}
+.Flight_schedule_Tag:hover .Flight_schedule_Tag_border{
+	right : 0px;
+}
+.Flight_schedule_Tag_border{
+	background: #ffc120;
+    width: 180px;
+    height: 50px;
+    position: relative;
+    z-index: -2;
+    right: 180px;
+    transition-duration: 0.5s;
+}
+.Flight_schedule_Tag_background{
+	background: #ffffff;
+    width: 171px;
+    height: 41px;
+    position: relative;
+    top: -48px;
+    margin: 0px auto;
+    line-height: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.Flight_schedule_img{
+	width : 50px;
+	display : inline-block;
+	position: relative;
+    bottom: 4px;
+    right: 11px;
+}
+.Flight_schedule_video{
+	width : 50px;
+	display : none;
+	position: relative;
+    bottom: 4px;
+    right: 11px;
+}
+.Flight_schedule_Text{
+	display: inline-block;
+    position: relative;
+    bottom: 24px;	
+}
+
+
+/* 실시간 운항스케줄 태그 */
+.RealTime_Flight_schedule_Tag{
+	font-family: 'TheJamsil5Bold';
+    position: relative;
+    bottom: 20px;
+    filter: opacity(0);
+    transition-duration: 0.5s;
+    background: black;
+    width: 230px;
+    height: 45px;
+    border-radius: 30px;
+    right: 100px;
+    overflow: hidden;
+}
+.RealTime_Flight_schedule_Tag:hover{
+	cursor: pointer;
+    box-shadow: 0px 0px 5px 0px #17d700;
+}
+.RealTime_Flight_schedule_Tag:hover .RealTime_Flight_schedule_Tag_border{
+	right : 0px;
+}
+.RealTime_Flight_schedule_Tag_border{
+	background: #17d700;
+    width: 235px;
+    height: 50px;
+    z-index: -1;
+    position: relative;
+    right: 235px;
+    transition-duration: 0.5s;
+}
+.RealTime_Flight_schedule_Tag_background{
+	background: #ffffff;
+    width: 226px;
+    height: 41px;
+    position: relative;
+    top: -48px;
+    margin: 0px auto;
+    line-height: 30px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.RealTime_Flight_schedule_img{
+	width: 50px;
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    right: 11px;
+}
+.RealTime_Flight_schedule_video{
+	width : 50px;
+	display : none;
+	position: relative;
+    bottom: 10px;
+    right: 11px;
+}
+.RealTime_Flight_schedule_Text{
+	display: inline-block;
+    position: relative;
+    bottom: 24px;
+}
+
 
 
 .transportation_tag2{
@@ -394,11 +528,144 @@
 .transportation_tag3{
 	display : inline-block;
 	margin: 30px 20px 0px;
-	
+	z-index: 2;
+    position: relative;
 }
 .transportation_tag3:hover {
 	  animation: jello-horizontal 0.9s both;
+	  cursor: pointer;
+	  
 }
+
+
+/* 공항버스 */
+.AirportBus{
+	width: 130px;
+    display: block;
+    margin: 0px auto;
+	position: relative;
+	bottom: 53px;
+    left: 75px;
+    z-index: 1;
+	transition-duration: 0.5s;
+	filter: opacity(0);
+	border-radius: 31px;
+    height: 45px;
+    overflow: hidden;
+    background: black;
+    color: black;
+}
+.AirportBus:hover{
+	cursor: pointer;
+    box-shadow: 0px 0px 5px 0px #ff5cb9;
+}
+.AirportBus:hover .AirportBus_border{
+	right : 0px;
+}
+.AirportBus_img{
+	width : 50px;
+	display : inline-block;
+	position: relative;
+    bottom: 5px;
+}
+.AirportBus_video{
+	width : 50px;
+	display : none;
+	position: relative;
+    bottom: 5px;
+}
+.AirportBus_tag{
+	display : inline-block;
+	position: relative;
+    bottom: 25px;
+    font-family: 'TheJamsil5Bold';
+}
+.AirportBus_background{
+	background: #ffffff;
+    height: 41px;
+    width: 126px;
+    position: relative;
+    top: 2px;
+    border-radius: 20px;
+    left: 2px;
+    overflow: hidden;
+}
+
+
+/* 시외버스 */
+.IntercityBus{
+	width: 195px;
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    bottom: 161px;
+    left: 75px;
+    z-index: 1;
+    transition-duration: 0.5s;
+    filter: opacity(0);
+    border-radius: 31px;
+    height: 45px;
+    overflow: hidden;
+    background: black;
+    color: black;
+}
+.IntercityBus:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 5px 0px #2ec643;
+}
+.IntercityBus:hover .IntercityBus_border{
+	right : 0px;
+}
+.IntercityBus_img{
+	width : 50px;
+	display : inline-block;
+	position: relative;
+    bottom: 5px;
+}
+.IntercityBus_video{
+	width : 50px;
+	display : none;
+	position: relative;
+    bottom: 5px;
+}
+.IntercityBus_tag{
+	display : inline-block;
+	position: relative;
+    bottom: 25px;
+    font-family: 'TheJamsil5Bold';
+}
+.IntercityBus_background{
+	background: #ffffff;
+    height: 41px;
+    width: 191px;
+    position: relative;
+    top: 2px;
+    border-radius: 20px;
+    left: 2px;
+    overflow: hidden;
+}
+
+/* 버스 태그 테두리 */
+.AirportBus_border{
+	height: 45px;
+    position: absolute;
+    width: 135px;
+    background: #ff5cb9;
+    right: 135px;
+    transition-duration: 0.5s;
+}
+
+.IntercityBus_border{
+	height: 45px;
+    position: absolute;
+    width: 200px;
+    background: #2ec643;
+    right: 200px;
+    transition-duration: 0.5s;
+}
+
+
+
 
 
 .transportation_tag4{
@@ -480,8 +747,9 @@
 }
 .header_hidden_tagDiv{
 	position: absolute;
-    padding-left: 380px;
+    padding-left: 444px;
     font-size: 20px;
+    padding-bottom: 30px;
 }
 .hidden_tag{
 	display: inline-block;
@@ -489,20 +757,104 @@
     font-size: 25px;
     font-family: 'TheJamsil5Bold';
     padding-top: 12px;
+    transition-duration: 0.5s;
+}
+
+
+.hidden_airTag{
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	top: 38px;
+	height: 80px;
+}
+#Header_AirTag{
+	position: relative;
+	transition-duration: 0.5s;
+	top: 4px;
+}
+.hidden_SAirTag{
+	position: absolute;
+    bottom: 30px;
+    font-size: 13px;
+    left: -80px;
+    transition-duration: 0.5s;
+    font-family: 'TheJamsil5Bold';
+    line-height: 16px;
+    text-align: left;
+}
+.AirTag_title:hover{
+	color: #66d6f4;
+	cursor: pointer;
+}
+.AirTag_prevBtn{
+	position: absolute;
+    top: -18px;
+    left: 66px;
+    height: 65px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 7px 0px 0px 7px;
+}
+.AirTag_prevBtn:hover{
+	background : #d0d0d0;
+}
+
+
+
+
+.hidden_busTag{
+	overflow: hidden;
+	display: inline-block;
+	position: relative;
+	top: 38px;
+	height: 80px;
+}
+#Header_BusTag{
+	position: relative;
+	transition-duration: 0.5s;
+	top : 3px;
 }
 .hidden_tag:hover{
 	color: #66d6f4;
 	cursor: pointer;
 }
-.loginBox{
-	padding-left: 1020px;
+.hidden_SbusTag{
+	position: absolute;
+    bottom: 30px;
+    font-size: 11px;
+    left: -80px;
+    transition-duration: 0.5s;
     font-family: 'TheJamsil5Bold';
-    color: #595959;	
+    line-height: 15px;
+    text-align: left;
+}
+.busTag_title:hover{
+	color: #66d6f4;
+	transition-duration: 0.3s;
+}
+.BusTag_prevBtn{
+    position: absolute;
+    top: -19px;
+    left: 66px;
+    height: 65px;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    border-radius: 7px 0px 0px 7px;
+}
+.BusTag_prevBtn:hover{
+	background : #d0d0d0;
+}
+.loginBox{
+	padding-left: 1121px;
+    font-family: 'TheJamsil5Bold';
+    color: #595959;
+    padding-top: 25px;
 }
 .hidden_title_img{
 	width: 30px;
     position: relative;
-    top: 5px;
+    top: -3px;
 }
 .login_join_text{
 	color: #595959;	

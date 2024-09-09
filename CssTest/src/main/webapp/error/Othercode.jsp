@@ -10,15 +10,125 @@
 </head>
 <body>
 
-	<div class="wrapper">
-		<div class="info">
-			<h1>Error</h1>
-			<p class="Error_text">현재 페이지에서 에러가 생겼습니다</p>
+<section>
+
+	<div class="scroll text1">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
 		</div>
-		<div class="wave"></div>
-		<div class="wave"></div>
-		<div class="wave"></div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
 	</div>
+	<div class="scroll text2">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	<div class="scroll text3">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	<div class="scroll text4">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	<div class="scroll text5">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	
+	<div class="scroll text6">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	
+	<div class="scroll text7">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	
+	<div class="scroll text8">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	
+	<div class="scroll text9">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	
+	<div class="scroll text10">
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+		<div>
+			Error <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>Error • <span>Error • </span>
+		</div>
+	</div>
+	
+</section>
 	
 </body>
 </html>
