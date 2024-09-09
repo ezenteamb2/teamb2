@@ -31,6 +31,7 @@ import org.w3c.dom.NodeList;
 
 import com.csstest.teamb.VO.airbusTOICNVO;
 import com.csstest.teamb.VO.airbuskorVO;
+import com.csstest.teamb.VO.totalBusVO;
 import com.csstest.teamb.repository.airbusRepository;
 
 @Controller
@@ -251,6 +252,7 @@ public class AirbusController {
 	public Map<String, Object> TestOk(			
 			@RequestParam(name="city", required=false) String city,
 			@RequestParam(name="airport", required=false) String airport, 
+			@RequestParam(name="pageno", required=false, defaultValue = "0") int pageno,
 			Model model) 
 			throws Exception {
 		
@@ -258,27 +260,35 @@ public class AirbusController {
 		System.out.println(airport);
 		
 		Map<String,Object> map = new HashMap<>();
-		List<airbusTOICNVO> icnList = new ArrayList<>();
-		List<airbuskorVO> korList = new ArrayList<>();
+/*		List<airbusTOICNVO> icnList = new ArrayList<>();
+		List<airbuskorVO> korList = new ArrayList<>();*/
+		List<totalBusVO> busList = new ArrayList<>();
 		
 		String airType = ""; 
-
+		String airportName ="";
+		
+		totalBusVO totalbusVo = new totalBusVO();
+		totalbusVo.setBusNum(city);
+		
 		if(airport.equals("인천( ICN )")) {
-			airbusTOICNVO airbustoicnVo = new airbusTOICNVO(); 
-			airbustoicnVo.setBusnumber(city);
-			
-			icnList = airbusRepository.select(city);
-			airType = "icn"; 
+			airportName ="ICN";  
+		}else if(airport.equals("김포( GMP )")) {
+			airportName ="GMP";  
+		}else if(airport.equals("김해( PUS )")) {
+			airportName ="PUS";  
 		}else {
-			airbuskorVO airbuskorVo = new airbuskorVO();
-			airbuskorVo.setBusNum(city); 
-
+			airportName ="CJU"; 
 		}
+		
+		int limit = pageno*10; 
+		
+		busList = airbusRepository.selecttotal(city, airportName, limit); 
+		
+		
 		//데이터를  Model 객체에 추가
-		if(!icnList.isEmpty()) {
+		if(!busList.isEmpty()) {
 			map.put("result", "success"); 
-			map.put("data", icnList); 	
-			map.put("type", airType); 
+			map.put("data", busList); 	
 		} else {
 			map.put("result", "failed");
 		}
@@ -286,5 +296,6 @@ public class AirbusController {
 		
 		return map; 
 	}
+
 
 }

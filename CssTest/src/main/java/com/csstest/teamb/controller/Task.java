@@ -57,8 +57,9 @@ public class Task {
 		//System.out.println("스케줄러 동작");
 	}
 
-	public String FlightApiiDB( )  throws IOException, ParserConfigurationException, SAXException {
+	public String FlightApiDB( )  throws IOException, ParserConfigurationException, SAXException {
 		flightrepository.deletecleartable();
+		
 		List<FlightInfoVO> flightInfoList = new ArrayList<>();
 	    int pageNO= 1;
 	     // Total pages, initialized to 1 to start the loop
@@ -116,7 +117,7 @@ public class Task {
  			// 제일 첫번째 태그  문서 구조 안정화
 	    	// XML 문서의 루트 요소를 가져와서 정규화(normalize)합니다.
 	    	//✨이러한 작업을 하는 이유는 XML 문서를 작성하거나 생성하는 과정에서 인간의 실수나 다양한 프로세싱 도중의 변화로 인해 일관성 없는 형태로 문서 구조가 만들어질 수 있기 때문입니다.
- 				doc.getDocumentElement().normalize();
+ 				
  				
  				 if (totalCount == 0) {
  		            NodeList totalCountList = doc.getElementsByTagName("totalCount");
@@ -136,7 +137,7 @@ public class Task {
  				
  				//NodeList에서 현재 순회 중인 item 요소를 가져옵니다.
  				for(int temp = 0; temp < nList.getLength(); temp++){
- 					System.out.println(temp);
+ 					
  					Node nNode = nList.item(temp);
  					
  					Element eElement = (Element) nNode;
@@ -169,6 +170,8 @@ public class Task {
 		        pageNO++;
 	       
 	}
+	    
+	    System.out.println("pageNO::"+pageNO);
 		    for (FlightInfoVO flightInfo : flightInfoList) {
 		        System.out.println(flightInfo);
 		    }

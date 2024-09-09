@@ -37,6 +37,28 @@
 			<result property="route" column="route"/>
 	</resultMap>
 	
+	<resultMap type="com.csstest.teamb.VO.totalBusVO" id="totalbusMap">
+		<id property="airportBusNo" column="airport_bus_no"/>
+			<result property="airportName" column="airport_name"/>
+			<result property="area" column="area"/>
+			<result property="busNum" column="bus_num"/>
+			<result property="t1endfirst" column="t1endfirst"/>	
+			<result property="t2endfirst" column="t2endfirst"/>
+			<result property="t1endlast" column="t1endlast"/>	
+			<result property="t2endlast" column="t2endlast"/>	
+			<result property="fare" column="fare"/>	
+			<result property="busclass" column="busclass"/>		
+			<result property="cpname" column="cpname"/>	
+			<result property="t1wdayt" column="t1wdayt"/>
+			<result property="t1wt" column="t1wt"/>	
+			<result property="t2wdayt" column="t2wdayt"/>	
+			<result property="t2wt" column="t2wt"/>	
+			<result property="routeinfo" column="routeinfo"/>	
+			<result property="t1ridelo" column="t1ridelo"/>	
+			<result property="t2ridelo" column="t2ridelo"/>	
+	</resultMap>
+	
+	
 	<insert id="createAirbus" parameterType="com.csstest.teamb.VO.airbusTOICNVO" useGeneratedKeys="true" keyProperty="icnbusNo">
 		insert into icn_bus(icn_bus_no, adultfare, area, busclass, busnumber, cpname, routeinfo, t1endfirst, 
 		t1endlast, t1ridelo, t1wdayt, t1wt, t2endfirst, t2endlast, t2ridelo, t2wdayt, t2wt, toawfirst, toawlast)
@@ -48,6 +70,13 @@
 	<insert id="createAirbuskor" parameterType="com.csstest.teamb.VO.airbuskorVO" useGeneratedKeys="true" keyProperty="airportBusNo">
 		insert into airport_bus(airport_bus_no, category, num, card, comname, end_time, etc, first_time, gate, money, route)
 		values(#{airportBusNo}, #{category}, #{busNum}, #{card}, #{comName}, #{endTime}, #{etc}, #{firstTime}, #{gate}, #{money}, #{route}); 
+	</insert>
+	
+	<insert id="createTotalbus" parameterType="com.csstest.teamb.VO.totalBusVO" useGeneratedKeys="true" keyProperty="airportBusNo">
+		insert into total_bus
+		(airport_name, airport_bus_no, area, bus_num, t1endfirst, t2endfirst, t1endlast, t2endlast, fare, busclass, cpname, t1wdayt, t1wt, t2wdayt, t2wt, routeinfo, t1ridelo, t2ridelo)
+		values(#{airportName}, #{airportBusNo}, #{area}, #{busNum}, #{t1endfirst}, #{t2endfirst}, 
+		#{t1endlast}, #{t2endlast}, #{fare}, #{busclass}, #{cpname}, #{t1wdayt}, #{t1wt}, #{t2wdayt}, #{t2wt}, #{routeinfo}, #{t1ridelo}, #{t2ridelo});
 	</insert>
 	
 	<select id="selectAirbus" parameterType="string" resultType="com.csstest.teamb.VO.airbusTOICNVO">
@@ -82,6 +111,28 @@
 				select * from icn_bus where busnumber like concat('%', #{value}, '%');
 			</otherwise>
 		</choose>
+	</select>
+
+	<select id="selectTotalbus" parameterType="HashMap" resultType="com.csstest.teamb.VO.totalBusVO">
+		<choose>
+			<when test ="city eq '서울'">
+				select * from total_bus where area = 1 and airport_name = #{airportName}
+			</when>
+			<when test ="city eq '인천'">
+				select * from total_bus where area = 3 and airport_name = #{airportName}
+			</when>
+			<when test ="city eq '경기'">
+				select * from total_bus where area = 2 and airport_name = #{airportName}
+			</when>
+			<when test ="city eq '제주'">
+				select * from total_bus where area = 8 and airport_name = #{airportName}
+			</when>
+			<otherwise>
+				select * from total_bus where (routeinfo like concat('%, ', #{city}, '%') or routeinfo like concat('%-', #{city}, '%') or routeinfo like concat('%* ', #{city}, '%') or routeinfo like concat('% ', #{city}, '%')) and airport_name = #{airportName}
+			</otherwise>
+				
+		</choose>
+		limit #{limit} , 10
 	</select>
 
 </mapper>
