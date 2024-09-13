@@ -260,7 +260,7 @@
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
             
             <div class="table_container">
-	            <table class="table caption-top">
+	            <table class="table caption-top" style="width:75%;">
 	                <caption>
 	                	
 	                </caption>
@@ -279,7 +279,7 @@
 	                	<!-- ajax 영역  -->
 					</tbody>
 	             </table>
-	             <div id="scrollDetector"></div>
+	             <div id="scrollDetector" style="height:20px;"></div>
              </div><!-- <div class="table_container"> -->         
         </div>
 </div>
@@ -317,11 +317,11 @@ const observer = new IntersectionObserver((entries) => {
             fetchMoreData(); // 추가 데이터 요청
         }
     });
-}, {
-    root: null, // 뷰포트를 루트로 설정
-    rootMargin: '0px',
-    threshold: 1.0 // 대상 요소가 100% 보여질 때 콜백 호출
-});
+}, /* {
+root: null, // 뷰포트를 루트로 설정
+rootMargin: '0px',
+threshold: 1.0 // 대상 요소가 100% 보여질 때 콜백 호출
+} */);
 
 var contextPath = '<%= request.getContextPath() %>';
 

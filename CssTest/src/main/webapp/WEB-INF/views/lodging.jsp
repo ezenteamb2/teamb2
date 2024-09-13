@@ -67,9 +67,9 @@
 </script>
 
 <body>
+
 <%@ include file="/include/ChatBot.jsp" %>
 	<div class="lodging_div">
-		
 		<div style="font-size: 25px;">
 			공항근처 숙소찾기
 		</div>

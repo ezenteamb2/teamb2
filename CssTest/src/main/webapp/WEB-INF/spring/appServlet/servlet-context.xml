@@ -41,7 +41,7 @@
 	<task:scheduled-tasks scheduler="scTest">
 		<!--스케줄러가 동작시킬 메서드와 동작시킬 주기를 등록한다. -->
 		<task:scheduled ref="scTask" method="InAPI" cron="0 0 0/2 * * *"/>
-		<task:scheduled ref="scTask" method="FlightApiiDB" cron="0 0 0/3 * * *"/>
+		<task:scheduled ref="scTask" method="FlightApiDB" cron="0 0 0/3 * * *"/>
 		<!-- <task:scheduled ref="scTask" method="InAPI" cron="*/60 * * * * *"/> -->
 	</task:scheduled-tasks> 
 	 

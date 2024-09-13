@@ -88,7 +88,7 @@
 							"</div>"+
 							
 							"다른 궁금한 점은 1:1 채팅을 해주세요"+
-							"<a href='http://localhost:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
+							"<a href='http://jjezen.cafe24.com:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
 								"<div class='chatbot_Tag_Dark' id='WebSocket_Chat' style='margin-top: 15px; width: 270px;'>"+
 									"1:1채팅"+
 								"</div>"+
@@ -122,7 +122,7 @@
 									"</div>"+
 									
 									"다른 궁금한 점은 1:1 채팅을 해주세요"+
-									"<a href='http://localhost:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
+									"<a href='http://jjezen.cafe24.com:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
 										"<div class='chatbot_Tag' id='WebSocket_Chat' style='margin-top: 15px; width: 270px;'>"+
 											"1:1채팅"+
 										"</div>"+
@@ -226,7 +226,7 @@
 							"</div>"+
 							
 							"다른 궁금한 점은 1:1 채팅을 해주세요"+
-							"<a href='http://localhost:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
+							"<a href='http://jjezen.cafe24.com:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
 								"<div class='chatbot_Tag_Dark' id='WebSocket_Chat' style='margin-top: 15px; width: 270px;'>"+
 									"1:1채팅"+
 								"</div>"+
@@ -258,7 +258,7 @@
 					"</div>"+
 					
 					"다른 궁금한 점은 1:1 채팅을 해주세요"+
-					"<a href='http://localhost:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
+					"<a href='http://jjezen.cafe24.com:5000/' onclick='window.open(this.href, `_blank`, `width=418, height=645`); return false;' style='color : black;' rel='noopener noreferrer'>"+
 						"<div class='chatbot_Tag' id='WebSocket_Chat' style='margin-top: 15px; width: 270px;'>"+
 							"1:1채팅"+
 						"</div>"+
@@ -335,6 +335,9 @@
 								"<a href='<c:url value='/air/flight-schedule'/>'>"+
 									"<div class='chatbot_Tag_Dark' id='Flight_schedule'>운항스케줄</div>"+
 								"</a>"+
+								"<a href='<c:url value='/airport.do'/>'>"+
+									"<div class='chatbot_Tag_Dark' id='Flight_schedule'>실시간 스케줄</div>"+
+								"</a>"+
 								"<div class='chatbot_Tag_Dark' id='Airline_ticket_reservation'>항공권 구매</div>"+
 								"<div class='chatbot_Tag_Dark' id='Parking_information'>주차안내</div>"+
 								"<div class='chatbot_Tag_Dark' id='public_transportation'>대중교통 안내</div>"+
@@ -353,6 +356,9 @@
 								"<div>"+
 									"<a href='<c:url value='/air/flight-schedule'/>'>"+
 										"<div class='chatbot_Tag' id='Flight_schedule'>운항스케줄</div>"+
+									"</a>"+
+									"<a href='<c:url value='/airport.do'/>'>"+
+										"<div class='chatbot_Tag' id='Flight_schedule'>실시간 스케줄</div>"+
 									"</a>"+
 									"<div class='chatbot_Tag' id='Airline_ticket_reservation'>항공권 구매</div>"+
 									"<div class='chatbot_Tag' id='Parking_information'>주차안내</div>"+
@@ -885,7 +891,9 @@
 						
 						"<div class='ChatBot_text_Dark'>열차 정보를 선택해주세요"+
 							"<div>"+
-								"<div class='chatbot_Tag_Dark' >열차 조회</div>" +
+								"<a href='<c:url value='/train/subway.do'/>'>"+
+									"<div class='chatbot_Tag_Dark' >열차 조회</div>" +
+								"</a>"+
 								"<div class='chatbot_Tag_Dark' id='Train_ticket_reservation' style='width: 90px;'>열차 예매하기</div>" +
 							"</div>"+
 						"</div>"
@@ -917,7 +925,9 @@
 						
 						"<div class='ChatBot_text'>열차 정보를 선택해주세요"+
 							"<div>"+
-								"<div class='chatbot_Tag' >열차 조회</div>" +
+								"<a href='<c:url value='/train/subway.do'/>'>"+
+									"<div class='chatbot_Tag' >열차 조회</div>" +
+								"</a>"+
 								"<div class='chatbot_Tag' id='Train_ticket_reservation' style='width: 90px;'>열차 예매하기</div>" +
 							"</div>"+
 						"</div>"
@@ -1078,7 +1088,7 @@
 				$(".ChatBot_body").append(
 						
 						"<div class='ChatBot_box_profile_Dark'>" +
-							"<img src='resources/img/ChatBot_img/BotProfile.png' style='width: 50px; margin: auto; position: relative;'>" +
+							"<img src='<c:url value='/resources/img/ChatBot_img/BotProfile.png' />' style='width: 50px; margin: auto; position: relative;'>" +
 						"</div>" +
 						"<div class='ChatBot_loding_Dark'>"+
 							"<div class='dots-flow'></div>"+
@@ -1110,7 +1120,7 @@
 				$(".ChatBot_body").append(
 						
 						"<div class='ChatBot_box_profile'>" +
-							"<img src='resources/img/ChatBot_img/BotProfile.png' style='width: 50px; margin: auto; position: relative;'>" +
+							"<img src='<c:url value='/resources/img/ChatBot_img/BotProfile.png' />' style='width: 50px; margin: auto; position: relative;'>" +
 						"</div>" +
 						"<div class='ChatBot_loding'>"+
 							"<div class='dots-flow'></div>"+
@@ -1166,16 +1176,12 @@
 						
 						"<div class='ChatBot_text_Dark'>버스 종류를 선택해주세요"+
 							"<div>"+
-								"<a href='<c:url value='#'/>'>"+
-									"<div class='chatbot_Tag_Dark' id='Bus_inquiry'>공항 버스</div>" +
+								"<a href='<c:url value='/airbus/bus.do'/>'>"+
+									"<div class='chatbot_Tag_Dark'>공항 버스</div>" +
 								"</a>"+
 								
-								"<a href='<c:url value='#'/>'>"+
-									"<div class='chatbot_Tag_Dark' id='Bus_inquiry'>고속 버스</div>" +
-								"</a>"+
-									
-								"<a href='<c:url value='#'/>'>"+
-									"<div class='chatbot_Tag_Dark' id='Bus_inquiry'>시외 버스</div>" +
+								"<a href='<c:url value='/bus/express.do'/>'>"+
+									"<div class='chatbot_Tag_Dark'>고속,시외버스</div>" +
 								"</a>"+
 							"</div>"+
 						"</div>"
@@ -1207,16 +1213,12 @@
 						
 						"<div class='ChatBot_text'>버스 종류를 선택해주세요"+
 							"<div>"+
-								"<a href='<c:url value='#'/>'>"+
-									"<div class='chatbot_Tag' id='Bus_inquiry'>공항 버스</div>" +
+								"<a href='<c:url value='/airbus/bus.do'/>'>"+
+									"<div class='chatbot_Tag'>공항 버스</div>" +
 								"</a>"+
 								
-								"<a href='<c:url value='#'/>'>"+
-									"<div class='chatbot_Tag' id='Bus_inquiry'>고속 버스</div>" +
-								"</a>"+
-									
-								"<a href='<c:url value='#'/>'>"+
-									"<div class='chatbot_Tag' id='Bus_inquiry'>시외 버스</div>" +
+								"<a href='<c:url value='/bus/express.do'/>'>"+
+									"<div class='chatbot_Tag'>고속,시외버스</div>" +
 								"</a>"+
 							"</div>"+
 						"</div>"
@@ -1765,7 +1767,7 @@
 	
 </script>
 
-<div class="top_button">
+<div class="top_button" onClick="javascript:window.scrollTo(0,0)">
 	<img src="<c:url value='/resources/img/ChatBot_img/TopButton.png' />" style="width: 35px; position:relative; top:6px ">
 	<p style="font-family: 'Cafe24Decoschool'; margin:0px; position: relative; top: 8px;">TOP</p>
 </div>
@@ -1838,7 +1840,7 @@
 					</div>
 				</div>
 				다른 궁금한 점은 1:1 채팅을 해주세요
-				<a href="http://localhost:5000/" onclick="window.open(this.href, '_blank', 'width=418, height=645'); return false;" style="color : black;"  rel="noopener noreferrer" >
+				<a href="http://jjezen.cafe24.com:5000/" onclick="window.open(this.href, '_blank', 'width=418, height=645'); return false;" style="color : black;"  rel="noopener noreferrer" >
 					<div class="chatbot_Tag" id="WebSocket_Chat" style="margin-top: 15px; width: 270px;">
 					1:1채팅
 					</div>
