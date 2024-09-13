@@ -322,7 +322,6 @@
 		})
 	})
 	
-	
 </script>
 
 <body>
@@ -364,7 +363,7 @@
 			</div>
 			
 			
-			<a href="#" style="color: black; text-decoration: none;">
+			<a href="<c:url value="/train/subway.do"/>" style="color: black; text-decoration: none;">
 				<div class="hidden_tag">
 					<img src="<c:url value="/resources/img/Title_img/hidden_title_img2.png"/>" class="hidden_title_img">
 					열차
@@ -378,12 +377,12 @@
 				</div>
 				
 				<div class="hidden_SbusTag">
-					<a href="<c:url value='#'/>" style="color:black; text-decoration: none; font-size:13px;">
+					<a href="<c:url value='/airbus/bus.do'/>" style="color:black; text-decoration: none; font-size:13px;">
 						<div class="busTag_title">
 							공항버스
 						</div>
 					</a>
-					<a href="<c:url value='#'/>" style="color:black; text-decoration: none;">
+					<a href="<c:url value='/bus/express.do'/>" style="color:black; text-decoration: none;">
 						<div class="busTag_title">
 							고속,시외버스
 						</div>
@@ -754,7 +753,7 @@
 			</div>
 		</div>
 		
-		<a href="#" style="color: black; text-decoration: none;">
+		<a href="<c:url value="/train/subway.do"/>" style="color: black; text-decoration: none;">
 			<div class="transportation_tag2">
 				<video class="tag_img2" src="<c:url value="/resources/img/tag_img/train.mp4"/>"></video>
 				<video class="tag_video2" src="<c:url value="/resources/img/tag_img/train.mp4"/>" autoplay="autoplay" loop muted></video>
@@ -779,7 +778,7 @@
 		
 		<!-- 버스 태그 -->
 		<div style="height: 35px; position: relative; z-index: -2;">
-			<a href="<c:url value="#"/>" style="visibility: hidden;">
+			<a href="<c:url value="/airbus/bus.do"/>" style="visibility: hidden;">
 				<div class="AirportBus">
 					<div class="AirportBus_border"></div>
 					<div class="AirportBus_background">
@@ -790,7 +789,7 @@
 				</div>
 			</a>
 			
-			<a href="<c:url value="#"/>" style="visibility: hidden;">	
+			<a href="<c:url value="/bus/express.do"/>" style="visibility: hidden;">	
 				<div class="IntercityBus">
 					<div class="IntercityBus_border"></div>
 					<div class="IntercityBus_background">

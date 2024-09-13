@@ -2,18 +2,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%@ include file="/include/header.jsp" %>
+
 <!-- 자바스크립트 -->
 <script src="<%=request.getContextPath() %>/resources/js/jquery-3.7.1.min.js"></script> 
 <!-- css -->
 <link rel="stylesheet" href="<%=request.getContextPath() %>/resources/css/subway.css">
 <html>
 
+
+<%@ include file="/include/ChatBot.jsp" %>
+
 <div class = "wrapper pre">
   
 </div>
 
   <div class="container">
-    <div class="card tabs">
+    <div class="card tabs" style="display: block;">
       <input id="tab-1" type="radio" class="tab tab-selector" checked="checked" name="tab" />
       <label for="tab-1" class="tab tab-primary">INCHEON</label>
       <input id="tab-2" type="radio" class="tab tab-selector" name="tab" />
