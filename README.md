@@ -1,6 +1,6 @@
 <h1>프로젝트</h1>
 <hr>
-![1](https://github.com/user-attachments/assets/ad09c4d8-bfc7-4233-aebc-e72811a6f5d4)
+![Image](https://github.com/user-attachments/assets/0d2358cd-af80-40fe-8187-21f9bd81a1f3)
 <br>
 
 <h3>프로젝트 소게</h3>
