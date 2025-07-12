@@ -1,25 +1,24 @@
-<h1>에어두드림 프로젝트</h1>
-<hr>
+<h1>🛫에어두드림 프로젝트</h1>
 <img src="https://github.com/user-attachments/assets/dcdb056a-2b7f-45bf-8d94-da49199ea268">
-<br>
+<br><br><br>
 
-<h3>프로젝트 소게</h3>
+<h2>📜프로젝트 소개</h2>
 <img src="https://github.com/user-attachments/assets/52bbe44b-908f-40ca-94e8-ca34945f88bc">
-<br>
+<br><br><br>
 
-<h3>진행 일정</h3>
+<h2>📅진행 일정</h2>
 <img src="https://github.com/user-attachments/assets/4882f229-bf55-4c50-b1a2-a22d83b4e60c">
-<br>
+<br><br><br>
 
-<h3>사용 기술</h3>
+<h2>🧰사용 기술</h2>
 <img src="https://github.com/user-attachments/assets/1c4e1f79-1411-45e0-85b4-da8c992eda26">
-<br>
+<br><br><br>
 
-<h3>서비스 구성</h3>
+<h2>📚서비스 구성</h2>
 <img src="https://github.com/user-attachments/assets/47a8d928-ea3e-4111-aa7a-c4b011768187">
-<br>
+<br><br><br>
 
-<h3>화면 구현</h3>
+<h2>💻화면 구현</h2>
 <img src="https://github.com/user-attachments/assets/09a1d426-91fe-4442-b3a7-e700d26d666e">
 <img src="https://github.com/user-attachments/assets/be0af3eb-84df-48b3-8c5a-ba38e4713dc2">
 <img src="https://github.com/user-attachments/assets/b3bb8092-55d7-42d9-82b6-baecf007f169">
@@ -36,9 +35,9 @@
 <img src="https://github.com/user-attachments/assets/c79c1c97-8f03-4c46-b990-cbc7b17d4876">
 <img src="https://github.com/user-attachments/assets/25234fb2-27e6-4300-83bd-3af9da201b67">
 <img src="https://github.com/user-attachments/assets/30c81e43-511b-407f-af50-4a6774697d17">
-<br>
+<br><br><br>
 
-<h3>팀 및 역할 소개</h3>
+<h2>😊팀 및 역할 소개</h2>
 <img src="https://github.com/user-attachments/assets/b8fab8ef-18f4-487e-8771-e29453f5e36c">
 <img src="https://github.com/user-attachments/assets/af967565-cf29-462f-9344-5bc18e9420ec">
 <img src="https://github.com/user-attachments/assets/677d0233-7588-4e0c-a5e1-451d98fd6afe">
