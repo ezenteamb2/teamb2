@@ -18,6 +18,10 @@
 <img src="https://github.com/user-attachments/assets/47a8d928-ea3e-4111-aa7a-c4b011768187">
 <br><br><br>
 
+<h2>💾ERD</h2>
+<img src="https://github.com/user-attachments/assets/19c2b369-f87b-4187-b619-eddcacc518db">
+<br><br><br>
+
 <h2>💻화면 구현</h2>
 <img src="https://github.com/user-attachments/assets/09a1d426-91fe-4442-b3a7-e700d26d666e">
 <img src="https://github.com/user-attachments/assets/be0af3eb-84df-48b3-8c5a-ba38e4713dc2">
